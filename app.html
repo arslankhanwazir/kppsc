@@ -1580,16 +1580,27 @@ function openWhatsApp() {
   const planText = plans[state.selectedPlan]||'1 Month Rs800';
   window.open(`https://wa.me/923358074323?text=${encodeURIComponent('Assalam o Alaikum! I have paid for PakPrep Pro — '+planText+' plan. Please find my payment screenshot attached.')}`, '_blank');
 }
-function tryUnlockCode() {
+async function tryUnlockCode() {
   const code=document.getElementById('code-input').value.trim().toUpperCase();
-  if(VALID_CODES.includes(code)){
-    state.isPremium=true; saveState();
-    document.getElementById('code-err').style.display='none';
-    document.getElementById('code-ok').style.display='block';
-    setTimeout(()=>showScreen('landing'),1500);
-  } else {
+  if(!code) return;
+  try {
+    const res = await fetch(`https://kppsc-prep-default-rtdb.firebaseio.com/keys/${code}.json`);
+    const data = await res.json();
+    if(data && data.status === 'available'){
+      await fetch(`https://kppsc-prep-default-rtdb.firebaseio.com/keys/${code}.json`,{
+        method:'PATCH',
+        body:JSON.stringify({status:'used',usedAt:Date.now()})
+      });
+      state.isPremium=true; saveState();
+      document.getElementById('code-err').style.display='none';
+      document.getElementById('code-ok').style.display='block';
+      setTimeout(()=>showScreen('landing'),1500);
+    } else {
+      document.getElementById('code-err').style.display='block';
+      document.getElementById('code-ok').style.display='none';
+    }
+  } catch(e){
     document.getElementById('code-err').style.display='block';
-    document.getElementById('code-ok').style.display='none';
   }
 }
 
