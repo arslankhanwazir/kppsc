@@ -1281,8 +1281,8 @@ let quiz = {
 
 function startQuiz() {
   const job = state.currentJob; if(!job) return;
-  const negOn = document.getElementById('neg-toggle').checked;
-  const count = state.isPremium ? 50 : 5;
+const negOn = document.getElementById('neg-toggle').checked;
+  const count = 50;
   const qs = buildQuestions(job.subjects, count, getBank());
   launchQuiz(qs, negOn, false);
 }
@@ -1300,7 +1300,7 @@ function startSubjectDrill() {
   const pool = (bank[subj] || FALLBACK_BANK[subj] || []);
 
   let count;
-  if (selectedSubjMode === 'quick')    count = state.isPremium ? 50 : 5;
+  if (selectedSubjMode === 'quick')    count = 50;
   else if (selectedSubjMode === 'full') count = 100;
   else                                  count = pool.length || 50; // marathon = all
 
