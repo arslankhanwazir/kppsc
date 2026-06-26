@@ -21,71 +21,17 @@ button,a,[onclick]{touch-action:manipulation;-webkit-tap-highlight-color:transpa
   --font:'Poppins',sans-serif;--urdu:'Noto Nastaliq Urdu',serif;--mono:'Space Grotesk',monospace;
 }
 html{scroll-behavior:smooth;}
-body{font-family:var(--font);background:transparent;color:var(--ink);min-height:100vh;overflow-x:hidden;}
-  /* FACEBOOK GLOW BUTTON */
-.fb-glow-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #1877f2;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 8px 16px 8px 14px;
-  border-radius: 40px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(24, 119, 242, 0.3);
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  position: relative;
-  overflow: hidden;
-}
-.fb-glow-btn::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 40px;
-  background: conic-gradient(from 0deg, #1877f2, #42a5f5, #1877f2, #42a5f5, #1877f2);
-  background-size: 300% 300%;
-  z-index: -1;
-  animation: glowSpin 4s linear infinite;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-.fb-glow-btn:hover::before {
-  opacity: 1;
-}
-.fb-glow-btn::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border-radius: 40px;
-  background: #1877f2;
-  z-index: -1;
-}
-.fb-glow-btn:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 8px 30px rgba(24, 119, 242, 0.6);
-}
-.fb-glow-btn:active {
-  transform: scale(0.96);
-}
-.fb-icon {
-  font-size: 18px;
-  line-height: 1;
-}
-@keyframes glowSpin {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='rgba(0,166,81,0.04)' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='12' fill='none' stroke='rgba(0,166,81,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size:60px 60px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 70% 50% at 20% 20%,rgba(0,166,81,0.07) 0%,transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 80%,rgba(212,168,67,0.05) 0%,transparent 60%);}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
-.screen{display:none;min-height:100vh;flex-direction:column;position:relative;z-index:1;background:transparent;}
+.screen{display:none;min-height:100vh;flex-direction:column;position:relative;z-index:1;}
 .screen.active{display:flex;}
 
 /* NAV */
@@ -515,7 +461,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
 </style>
 </head>
 <body>
-<canvas id="animated-bg"></canvas>
+
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
@@ -547,19 +493,13 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
 <!-- ==================== LANDING ==================== -->
 <div class="screen active" id="landing">
   <nav class="land-nav">
-  <div class="logo-wrap">
-    <div class="logo-main">Pak<span>Prep</span> Pro</div>
-    <div class="logo-sub">AI-Powered Exam Prep</div>
-  </div>
-  
-  <!-- FACEBOOK GLOW BUTTON -->
-  <a href="https://www.facebook.com/pakprepro/" target="_blank" rel="noopener noreferrer" class="fb-glow-btn">
-    <span class="fb-icon">📘</span>
-    <span>Facebook</span>
-  </a>
-  
-  <div class="nav-badge">Pakpre Pro</div>
-</nav>
+    <div class="logo-wrap">
+      <div class="logo-main">Pak<span>Prep</span> Pro</div>
+      <div class="logo-sub">AI-Powered Exam Prep</div>
+    </div>
+    <div class="nav-badge">Pakpre Pro</div>
+  </nav>
+
   <div class="land-hero">
     <div class="hero-eyebrow">Live — Real MCQs</div>
     <div class="hero-urdu">پاکستانی امتحانات کی تیاری</div>
@@ -1742,36 +1682,6 @@ function showScreen(id){
   if(id==='bookmarks-screen') renderBookmarks();
   if(id==='planner-screen') renderPlanner();
 }
-
-// ===== ANIMATED BACKGROUND =====
-(function(){
-  const canvas=document.getElementById('animated-bg');
-  const ctx=canvas.getContext('2d');
-  let W,H,particles=[],nodes=[],t=0;
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-  resize();window.addEventListener('resize',()=>{resize();initBg();});
-  const COLORS=['#00ff8c','#00c4ff','#d4a843','#7c5cfc','#ff4b6e'];
-  class Particle{constructor(){this.reset()}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.z=Math.random()*2+0.2;this.vx=(Math.random()-.5)*0.4*this.z;this.vy=(Math.random()-.5)*0.4*this.z;this.r=Math.random()*1.5+0.3;this.color=COLORS[Math.floor(Math.random()*COLORS.length)];this.opacity=Math.random()*0.6+0.2;this.life=0;this.maxLife=Math.random()*400+200;}update(){this.x+=this.vx;this.y+=this.vy;this.life++;if(this.life>this.maxLife||this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){const alpha=Math.min(this.life/40,1)*Math.min((this.maxLife-this.life)/40,1)*this.opacity;ctx.save();ctx.globalAlpha=alpha;ctx.shadowBlur=6*this.z;ctx.shadowColor=this.color;ctx.fillStyle=this.color;ctx.beginPath();ctx.arc(this.x,this.y,this.r*this.z,0,Math.PI*2);ctx.fill();ctx.restore();}}
-  class Node{constructor(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*0.3;this.vy=(Math.random()-.5)*0.3;this.r=Math.random()*2+1;this.color=COLORS[Math.floor(Math.random()*COLORS.length)];this.pulse=Math.random()*Math.PI*2;}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W)this.vx*=-1;if(this.y<0||this.y>H)this.vy*=-1;this.pulse+=0.04;}draw(){const glow=1+Math.sin(this.pulse)*0.5;ctx.save();ctx.shadowBlur=10*glow;ctx.shadowColor=this.color;ctx.fillStyle=this.color;ctx.globalAlpha=0.8;ctx.beginPath();ctx.arc(this.x,this.y,this.r*glow,0,Math.PI*2);ctx.fill();ctx.restore();}}
-  function drawEdges(){for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<160){ctx.save();ctx.globalAlpha=(1-d/160)*0.15;ctx.strokeStyle='#00a651';ctx.lineWidth=0.5;ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();ctx.restore();}}}
-  function drawGrid(){const gridSize=60,offX=(t*8)%gridSize;ctx.save();ctx.globalAlpha=0.06;ctx.strokeStyle='#00a651';ctx.lineWidth=0.5;const cols=Math.ceil(W/gridSize)+4;for(let i=-2;i<cols;i++){const x=i*gridSize-offX;ctx.beginPath();ctx.moveTo(x,H*0.4);ctx.lineTo(W/2+(x-W/2)*0.3,H*0.6);ctx.stroke();}for(let j=0;j<20;j++){const fy=j/20,y=H*0.4+fy*(H*0.2);ctx.globalAlpha=fy*0.1;ctx.beginPath();ctx.moveTo(W/2-fy*(W*0.6),y);ctx.lineTo(W/2+fy*(W*0.6),y);ctx.stroke();}ctx.restore();}
-  function drawHex(){[{cx:W*0.08,cy:H*0.2,r:40,s:0.008},{cx:W*0.92,cy:H*0.25,r:30,s:0.012},{cx:W*0.06,cy:H*0.75,r:25,s:0.01},{cx:W*0.94,cy:H*0.75,r:35,s:0.009}].forEach(h=>{ctx.save();ctx.globalAlpha=0.07;ctx.strokeStyle='#7c5cfc';ctx.lineWidth=1;ctx.translate(h.cx+Math.sin(t*0.7+h.s*100)*12,h.cy+Math.cos(t*0.5+h.s*100)*8);ctx.rotate(t*h.s);ctx.beginPath();for(let i=0;i<6;i++){const a=i*Math.PI/3;i===0?ctx.moveTo(Math.cos(a)*h.r,Math.sin(a)*h.r):ctx.lineTo(Math.cos(a)*h.r,Math.sin(a)*h.r);}ctx.closePath();ctx.stroke();ctx.restore();});}
-  function drawPulse(){nodes.forEach(n=>{const c=nodes.filter(o=>o!==n).sort((a,b)=>Math.hypot(a.x-n.x,a.y-n.y)-Math.hypot(b.x-n.x,b.y-n.y))[0];if(!c)return;const ph=((t*0.8+n.pulse*3)%1);if(ph<0.5){ctx.save();ctx.globalAlpha=0.5*(1-ph*2);ctx.fillStyle='#d4a843';ctx.shadowBlur=8;ctx.shadowColor='#d4a843';ctx.beginPath();ctx.arc(n.x+(c.x-n.x)*ph*2,n.y+(c.y-n.y)*ph*2,2,0,Math.PI*2);ctx.fill();ctx.restore();}});}
-  function initBg(){particles=Array.from({length:160},()=>new Particle());nodes=Array.from({length:50},()=>new Node());}
-  initBg();
-  (function loop(){
-    t+=0.01;ctx.clearRect(0,0,W,H);
-    const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*0.8);
-    g.addColorStop(0,'#071a0e');g.addColorStop(0.5,'#040d07');g.addColorStop(1,'#020604');
-    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-    drawGrid();drawHex();
-    for(let i=0;i<4;i++){const r=80+i*70+Math.sin(t+i*1.2)*10;ctx.save();ctx.globalAlpha=0.035-i*0.007;ctx.strokeStyle='#00c4ff';ctx.lineWidth=1;ctx.beginPath();ctx.arc(W/2,H/2,r,0,Math.PI*2);ctx.stroke();ctx.restore();}
-    drawEdges();nodes.forEach(n=>{n.update();n.draw();});drawPulse();
-    particles.forEach(p=>{p.update();p.draw();});
-    requestAnimationFrame(loop);
-  })();
-})();
-// ===== END ANIMATED BACKGROUND =====
 
 init();
 </script>
