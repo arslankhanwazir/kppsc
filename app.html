@@ -125,7 +125,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background:linear-gradient(90deg,var(--green),var(--gold));
   transform:scaleX(0);transform-origin:left;transition:transform 0.2s;}
 .job-card:hover::before{transform:scaleX(1);}
-.job-card:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,166,81,0.12);}
+.job-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,168,67,0.12);}
 @keyframes slideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 .job-icon{font-size:20px;margin-bottom:6px;}
 .job-title{font-size:12px;font-weight:700;line-height:1.35;margin-bottom:4px;color:var(--ink);}
@@ -171,7 +171,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 .mode-list{padding:0 20px;display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
 .mode-card{background:var(--card);border:2px solid var(--border);border-radius:14px;padding:16px;
   cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;}
-.mode-card:hover,.mode-card.sel{border-color:var(--green);box-shadow:0 0 16px rgba(0,166,81,0.1);}
+.mode-card.sel{border-color:var(--green);box-shadow:0 0 16px rgba(0,166,81,0.1);}
+.mode-card:hover{border-color:var(--gold);box-shadow:0 0 16px rgba(212,168,67,0.1);}
 .mode-card.locked-card{opacity:0.55;cursor:default;}
 .mode-card.locked-card:hover{border-color:var(--border);box-shadow:none;}
 .mode-head{display:flex;align-items:center;gap:10px;margin-bottom:5px;}
@@ -266,7 +267,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
 .opt{background:var(--bg2);border:1px solid var(--border);border-radius:10px;
   padding:12px 14px;display:flex;align-items:center;gap:12px;
   cursor:pointer;transition:all 0.15s;font-size:13px;font-weight:500;}
-.opt:hover{border-color:var(--green);background:var(--card);}
+.opt:hover{border-color:var(--gold);background:var(--card);}
 .opt.locked{cursor:default;}
 .opt.correct{background:var(--green-bg);border-color:var(--green);color:var(--green);}
 .opt.wrong{background:var(--red-bg);border-color:var(--red);color:var(--red);}
