@@ -1,363 +1,245 @@
+
+
+Kppsc app v3 · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PakPrep Pro — Crack KPPSC 2026</title>
+<title>PakPrep Pro — Crack Any Pakistan Exam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 button,a,[onclick]{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 :root{
-  --bg:#061a0c;
-  --bg2:#0a2015;
-  --bg3:#0d2618;
-  --card:#0f2b1a;
-  --card2:#163823;
-  --border:rgba(0,166,81,0.15);
-  --border2:rgba(0,166,81,0.28);
-  --ink:#e8f5e2;
-  --ink2:#7aab88;
-  --ink3:#3d6b4a;
-  --green:#00a651;
-  --green-bg:rgba(0,166,81,0.12);
-  --gold:#d4a843;
-  --gold-bg:rgba(212,168,67,0.12);
-  --red:#e53935;
-  --red-bg:rgba(229,57,53,0.1);
+  --bg:#061a0c;--bg2:#0a2015;--bg3:#0d2618;--card:#0f2b1a;--card2:#163823;
+  --border:rgba(0,166,81,0.15);--border2:rgba(0,166,81,0.28);
+  --ink:#e8f5e2;--ink2:#7aab88;--ink3:#3d6b4a;
+  --green:#00a651;--green-bg:rgba(0,166,81,0.12);
+  --gold:#d4a843;--gold-bg:rgba(212,168,67,0.12);
+  --red:#e53935;--red-bg:rgba(229,57,53,0.1);
   --amber:#ffc107;
-  --font:'Inter',sans-serif;
-  --urdu:'Noto Nastaliq Urdu',serif;
-  --mono:'JetBrains Mono',monospace;
+  --font:'Inter',sans-serif;--urdu:'Noto Nastaliq Urdu',serif;--mono:'JetBrains Mono',monospace;
 }
 html{scroll-behavior:smooth;}
 body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
-
-body::before{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='rgba(0,166,81,0.04)' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='12' fill='none' stroke='rgba(0,166,81,0.03)' stroke-width='1'/%3E%3C/svg%3E");
-  background-size:60px 60px;opacity:1;
-}
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:
-    radial-gradient(ellipse 70% 50% at 20% 20%, rgba(0,166,81,0.07) 0%,transparent 70%),
-    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(212,168,67,0.05) 0%,transparent 60%);
-}
-
+  background-size:60px 60px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 70% 50% at 20% 20%,rgba(0,166,81,0.07) 0%,transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 80%,rgba(212,168,67,0.05) 0%,transparent 60%);}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
-
 .screen{display:none;min-height:100vh;flex-direction:column;position:relative;z-index:1;}
 .screen.active{display:flex;}
-
-/* LANDING */
-#landing{background:transparent;}
-
-.land-nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 20px;background:rgba(6,26,12,0.85);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
-.logo-wrap .logo-main{
-  font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink);
-  letter-spacing:1px;
-}
+ 
+/* NAV */
+.land-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;
+  background:rgba(6,26,12,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.logo-wrap .logo-main{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink);letter-spacing:1px;}
 .logo-wrap .logo-main span{color:var(--green);}
 .logo-wrap .logo-sub{font-size:9px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase;margin-top:1px;}
-.nav-badge{
-  font-family:var(--mono);font-size:9px;color:var(--gold);
-  border:1px solid rgba(212,168,67,0.3);padding:4px 10px;border-radius:4px;
-  letter-spacing:1px;
-}
-
-.land-hero{
-  padding:36px 20px 20px;text-align:center;
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--mono);font-size:9px;color:var(--green);
-  letter-spacing:2px;text-transform:uppercase;
+.nav-badge{font-family:var(--mono);font-size:9px;color:var(--gold);border:1px solid rgba(212,168,67,0.3);
+  padding:4px 10px;border-radius:4px;letter-spacing:1px;}
+ 
+/* HERO */
+.land-hero{padding:36px 20px 20px;text-align:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:9px;
+  color:var(--green);letter-spacing:2px;text-transform:uppercase;
   background:rgba(0,166,81,0.08);border:1px solid rgba(0,166,81,0.2);
-  padding:5px 14px;border-radius:100px;margin-bottom:18px;
-}
-.hero-eyebrow::before{
-  content:'';width:5px;height:5px;border-radius:50%;
-  background:var(--green);animation:blink 1.4s ease-in-out infinite;
-}
+  padding:5px 14px;border-radius:100px;margin-bottom:18px;}
+.hero-eyebrow::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green);
+  animation:blink 1.4s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.2;}}
-
-.hero-urdu{
-  font-family:var(--urdu);font-size:22px;color:var(--gold);
-  line-height:1.8;margin-bottom:10px;direction:rtl;
-}
-.hero-h1{
-  font-size:32px;font-weight:900;line-height:1.15;
-  letter-spacing:-0.5px;margin-bottom:10px;
-}
+.hero-urdu{font-family:var(--urdu);font-size:22px;color:var(--gold);line-height:1.8;margin-bottom:10px;direction:rtl;}
+.hero-h1{font-size:32px;font-weight:900;line-height:1.15;letter-spacing:-0.5px;margin-bottom:10px;}
 .hero-h1 .green{color:var(--green);}
 .hero-h1 .gold{color:var(--gold);}
 .hero-sub{font-size:13px;color:var(--ink2);max-width:300px;margin:0 auto 20px;line-height:1.7;}
-
-.adv-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--card);border:1px solid var(--border2);
-  border-radius:100px;padding:7px 16px;
-  font-family:var(--mono);font-size:10px;color:var(--ink2);
-  margin-bottom:24px;
-}
+.adv-badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border2);
+  border-radius:100px;padding:7px 16px;font-family:var(--mono);font-size:10px;color:var(--ink2);margin-bottom:24px;}
 .adv-badge .flag{font-size:14px;}
-
-.stat-row{
-  display:flex;gap:8px;justify-content:center;flex-wrap:wrap;
-  padding:0 20px;margin-bottom:28px;
-}
-.stat-pill{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:100px;padding:7px 14px;
-  font-family:var(--mono);font-size:10px;color:var(--ink2);
-  display:flex;align-items:center;gap:5px;
-}
+ 
+/* COUNTDOWN */
+.countdown-wrap{margin:0 20px 24px;background:var(--card);border:1px solid var(--border2);
+  border-radius:14px;padding:14px 16px;}
+.cd-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.cd-label{font-family:var(--mono);font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;}
+.cd-set-btn{font-family:var(--mono);font-size:9px;color:var(--green);cursor:pointer;border:1px solid rgba(0,166,81,0.3);
+  padding:3px 8px;border-radius:4px;background:none;}
+.cd-blocks{display:flex;gap:8px;justify-content:center;}
+.cd-block{background:var(--bg2);border:1px solid var(--border);border-radius:8px;
+  padding:8px 12px;text-align:center;min-width:52px;}
+.cd-num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--green);line-height:1;}
+.cd-unit{font-size:8px;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+.cd-set-row{display:none;flex-direction:column;gap:8px;margin-top:10px;}
+.cd-set-row.show{display:flex;}
+.cd-date-input{background:var(--bg2);border:1px solid var(--border);border-radius:8px;
+  padding:8px 12px;color:var(--ink);font-family:var(--mono);font-size:12px;outline:none;width:100%;}
+.cd-save-btn{background:var(--green);color:#fff;border:none;border-radius:8px;
+  padding:8px;font-size:12px;font-weight:700;cursor:pointer;}
+ 
+/* STATS */
+.stat-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 20px;margin-bottom:28px;}
+.stat-pill{background:var(--card);border:1px solid var(--border);border-radius:100px;
+  padding:7px 14px;font-family:var(--mono);font-size:10px;color:var(--ink2);
+  display:flex;align-items:center;gap:5px;}
 .stat-pill b{color:var(--gold);}
-
-.subjects-section{
-  padding:0 20px;margin-bottom:20px;
-}
-.subjects-grid{
-  display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;
-}
-.subject-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:10px;padding:10px 8px;text-align:center;
-  cursor:pointer;transition:all 0.2s;font-size:11px;font-weight:600;
-}
+ 
+/* SUBJECT CARDS */
+.subjects-section{padding:0 20px;margin-bottom:20px;}
+.subjects-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.subject-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:10px 8px;text-align:center;cursor:pointer;transition:all 0.2s;font-size:11px;font-weight:600;}
 .subject-card:hover{border-color:var(--green);transform:translateY(-2px);}
 .subject-card .subj-icon{font-size:18px;display:block;margin-bottom:3px;}
 .subject-card .subj-name{color:var(--ink);}
-
+ 
+/* JOB SEARCH */
 .job-search-wrap{padding:0 20px;margin-bottom:16px;}
-.job-search{
-  width:100%;background:var(--card);border:1.5px solid var(--border);
-  border-radius:10px;padding:11px 14px 11px 38px;color:var(--ink);
-  font-size:13px;outline:none;transition:border-color 0.2s;
+.job-search{width:100%;background:var(--card);border:1.5px solid var(--border);
+  border-radius:10px;padding:11px 14px 11px 38px;color:var(--ink);font-size:13px;outline:none;
+  transition:border-color 0.2s;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233d6b4a' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:12px center;background-size:16px;
-}
+  background-repeat:no-repeat;background-position:12px center;background-size:16px;}
 .job-search:focus{border-color:var(--green);}
 .job-search::placeholder{color:var(--ink3);}
-
-.dept-filter{
-  display:flex;gap:6px;padding:0 20px;margin-bottom:16px;overflow-x:auto;
-  scrollbar-width:none;
-}
+ 
+/* DEPT FILTER */
+.dept-filter{display:flex;gap:6px;padding:0 20px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none;}
 .dept-filter::-webkit-scrollbar{display:none;}
-.dept-chip{
-  flex-shrink:0;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600;
+.dept-chip{flex-shrink:0;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600;
   border:1px solid var(--border);color:var(--ink2);cursor:pointer;transition:all 0.2s;
-  white-space:nowrap;background:var(--card);
-}
+  white-space:nowrap;background:var(--card);}
 .dept-chip.active{background:var(--green);border-color:var(--green);color:#fff;}
-
+ 
+/* JOB CARDS */
 .jobs-section{padding:0 20px;margin-bottom:24px;}
-.section-label{
-  font-family:var(--mono);font-size:9px;color:var(--ink3);
-  text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;
-  display:flex;align-items:center;gap:8px;
-}
+.section-label{font-family:var(--mono);font-size:9px;color:var(--ink3);text-transform:uppercase;
+  letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border);}
-
 .jobs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.job-card{
-  background:var(--card);border:1.5px solid var(--border);
-  border-radius:14px;padding:14px 12px;cursor:pointer;
-  transition:border-color 0.2s,transform 0.15s,box-shadow 0.2s;
-  animation:slideUp 0.4s ease both;
-  position:relative;overflow:hidden;
-}
-.job-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+.job-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;
+  padding:14px 12px;cursor:pointer;transition:border-color 0.2s,transform 0.15s,box-shadow 0.2s;
+  animation:slideUp 0.4s ease both;position:relative;overflow:hidden;}
+.job-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,var(--green),var(--gold));
-  transform:scaleX(0);transform-origin:left;transition:transform 0.2s;
-}
+  transform:scaleX(0);transform-origin:left;transition:transform 0.2s;}
 .job-card:hover::before{transform:scaleX(1);}
 .job-card:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,166,81,0.12);}
 @keyframes slideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-
 .job-icon{font-size:20px;margin-bottom:6px;}
 .job-title{font-size:12px;font-weight:700;line-height:1.35;margin-bottom:4px;color:var(--ink);}
 .job-dept{font-size:10px;color:var(--ink3);font-family:var(--mono);margin-bottom:6px;}
 .job-meta{display:flex;gap:4px;flex-wrap:wrap;}
-.job-tag{
-  font-size:8px;padding:2px 7px;border-radius:4px;font-weight:700;
-  font-family:var(--mono);letter-spacing:0.3px;
-}
+.job-tag{font-size:8px;padding:2px 7px;border-radius:4px;font-weight:700;font-family:var(--mono);letter-spacing:0.3px;}
 .tag-bps{background:rgba(0,166,81,0.12);color:var(--green);}
 .tag-mcq{background:rgba(212,168,67,0.12);color:var(--gold);}
-
 .no-jobs{text-align:center;padding:40px 20px;color:var(--ink3);font-size:13px;}
-
-.land-footer{
-  text-align:center;padding:16px 20px;margin-top:auto;
+ 
+/* FOOTER */
+.land-footer{text-align:center;padding:16px 20px;margin-top:auto;
   font-family:var(--mono);font-size:9px;color:var(--ink3);
-  letter-spacing:1px;text-transform:uppercase;
-  border-top:1px solid var(--border);
-}
+  letter-spacing:1px;text-transform:uppercase;border-top:1px solid var(--border);}
 .land-footer span{color:var(--green);}
-
-/* MODE SCREEN */
-.screen-header{
-  display:flex;align-items:center;gap:12px;
-  padding:14px 20px;background:rgba(6,26,12,0.9);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;
-}
-.btn-back{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:7px 12px;font-size:12px;font-weight:600;
-  cursor:pointer;color:var(--ink2);transition:all 0.15s;flex-shrink:0;
-}
+ 
+/* SCREEN HEADER */
+.screen-header{display:flex;align-items:center;gap:12px;padding:14px 20px;
+  background:rgba(6,26,12,0.9);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;}
+.btn-back{background:var(--card);border:1px solid var(--border);border-radius:8px;
+  padding:7px 12px;font-size:12px;font-weight:600;cursor:pointer;color:var(--ink2);
+  transition:all 0.15s;flex-shrink:0;}
 .btn-back:hover{border-color:var(--green);color:var(--green);}
 .sh-title{font-size:15px;font-weight:800;flex:1;}
 .sh-badge{font-family:var(--mono);font-size:9px;color:var(--gold);border:1px solid rgba(212,168,67,0.3);padding:3px 8px;border-radius:4px;}
-
-#mode-screen{background:transparent;}
-.mode-job-info{
-  margin:16px 20px;background:var(--card);border:1px solid var(--border2);
-  border-radius:12px;padding:14px 16px;
-}
+ 
+/* MODE SCREEN */
+.mode-job-info{margin:16px 20px;background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:14px 16px;}
 .mji-top{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
 .mji-icon{font-size:24px;}
 .mji-title{font-size:15px;font-weight:800;}
 .mji-dept{font-size:11px;color:var(--ink2);font-family:var(--mono);}
-.mji-pattern{
-  background:var(--bg2);border-radius:8px;padding:10px 12px;
-  font-size:12px;color:var(--ink2);line-height:1.7;
-}
+.mji-pattern{background:var(--bg2);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--ink2);line-height:1.7;}
 .mji-pattern b{color:var(--green);}
-
-.final-readiness-card{
-  background:linear-gradient(135deg,var(--card2),var(--bg2));
-  border:2px solid var(--gold);
-  border-radius:14px;padding:16px;margin:0 20px 12px;
-  cursor:pointer;transition:all 0.2s;
-}
+.final-readiness-card{background:linear-gradient(135deg,var(--card2),var(--bg2));border:2px solid var(--gold);
+  border-radius:14px;padding:16px;margin:0 20px 12px;cursor:pointer;transition:all 0.2s;}
 .final-readiness-card:hover{border-color:var(--green);transform:translateY(-2px);}
 .final-readiness-card .fr-head{display:flex;align-items:center;gap:10px;}
 .final-readiness-card .fr-icon{font-size:28px;}
 .final-readiness-card .fr-title{font-size:15px;font-weight:800;color:var(--gold);}
 .final-readiness-card .fr-desc{font-size:12px;color:var(--ink2);margin-top:4px;}
-
 .mode-list{padding:0 20px;display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
-.mode-card{
-  background:var(--card);border:2px solid var(--border);
-  border-radius:14px;padding:16px;cursor:pointer;
-  transition:border-color 0.2s,box-shadow 0.2s;
-}
+.mode-card{background:var(--card);border:2px solid var(--border);border-radius:14px;padding:16px;
+  cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;}
 .mode-card:hover,.mode-card.sel{border-color:var(--green);box-shadow:0 0 16px rgba(0,166,81,0.1);}
 .mode-card.locked-card{opacity:0.55;cursor:default;}
 .mode-card.locked-card:hover{border-color:var(--border);box-shadow:none;}
 .mode-head{display:flex;align-items:center;gap:10px;margin-bottom:5px;}
 .mode-icon{font-size:20px;}
 .mode-name{font-size:14px;font-weight:800;}
-.mode-tag-badge{
-  margin-left:auto;font-family:var(--mono);font-size:8px;
-  padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:0.5px;
-}
+.mode-tag-badge{margin-left:auto;font-family:var(--mono);font-size:8px;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:0.5px;}
 .tag-free{background:var(--green-bg);color:var(--green);}
 .tag-lock{background:var(--gold-bg);color:var(--gold);}
 .mode-desc{font-size:12px;color:var(--ink2);line-height:1.5;margin-bottom:6px;}
 .mode-meta-row{display:flex;gap:10px;}
 .mode-meta-item{font-family:var(--mono);font-size:9px;color:var(--ink3);}
-
-.toggle-row{
-  display:flex;align-items:center;justify-content:space-between;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:10px;padding:10px 16px;margin:0 20px 10px;
-}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;
+  background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 16px;margin:0 20px 10px;}
 .toggle-lbl{font-size:12px;font-weight:600;color:var(--ink2);}
 .switch{position:relative;display:inline-block;width:34px;height:20px;}
 .switch input{opacity:0;width:0;height:0;}
 .slider{position:absolute;cursor:pointer;inset:0;background-color:var(--bg3);transition:.4s;border-radius:20px;}
-.slider:before{position:absolute;content:"";height:14px;width:14px;left:3px;bottom:3px;background-color:var(--ink3);transition:.4s;border-radius:50%;}
-input:checked + .slider{background-color:var(--green);}
-input:checked + .slider:before{transform:translateX(14px);background-color:#fff;}
-
+.slider:before{position:absolute;content:"";height:14px;width:14px;left:3px;bottom:3px;
+  background-color:var(--ink3);transition:.4s;border-radius:50%;}
+input:checked+.slider{background-color:var(--green);}
+input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
 .note-txt{font-size:10px;color:var(--ink3);padding:0 20px 10px;font-family:var(--mono);}
-.btn-start{
-  margin:0 20px 20px;padding:14px;background:var(--green);
-  color:#fff;border:none;border-radius:10px;
-  font-size:15px;font-weight:800;cursor:pointer;
-  box-shadow:0 4px 20px rgba(0,166,81,0.3);
-  transition:all 0.2s;letter-spacing:0.3px;
-}
+.btn-start{margin:0 20px 20px;padding:14px;background:var(--green);color:#fff;border:none;
+  border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,166,81,0.3);transition:all 0.2s;letter-spacing:0.3px;}
 .btn-start:hover{background:#00c060;transform:translateY(-1px);}
-
+ 
 /* QUIZ */
-#quiz-screen{background:transparent;}
-.quiz-topbar{
-  background:rgba(6,26,12,0.92);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--border);padding:10px 20px;
-  position:sticky;top:0;z-index:10;
-}
+.quiz-topbar{background:rgba(6,26,12,0.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);padding:10px 20px;position:sticky;top:0;z-index:10;}
 .topbar-r1{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .q-logo{font-family:var(--mono);font-size:10px;font-weight:600;color:var(--ink3);}
 .q-logo span{color:var(--green);}
-.timer{
-  font-family:var(--mono);font-size:12px;font-weight:700;
-  background:var(--card);border:1px solid var(--border);
-  padding:4px 10px;border-radius:16px;color:var(--ink);transition:all 0.3s;
-}
+.timer{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--card);
+  border:1px solid var(--border);padding:4px 10px;border-radius:16px;color:var(--ink);transition:all 0.3s;}
 .timer.urgent{background:var(--red-bg);color:var(--red);border-color:var(--red);}
 .prog-row{display:flex;align-items:center;gap:10px;}
 .prog-track{flex:1;height:4px;background:var(--card2);border-radius:2px;overflow:hidden;}
-.prog-fill{
-  height:100%;border-radius:2px;
-  background:linear-gradient(90deg,var(--green),var(--gold));
-  transition:width 0.5s cubic-bezier(0.4,0,0.2,1);
-}
+.prog-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--green),var(--gold));
+  transition:width 0.5s cubic-bezier(0.4,0,0.2,1);}
 .prog-lbl{font-family:var(--mono);font-size:9px;color:var(--ink3);min-width:38px;text-align:right;}
 .score-row{display:flex;gap:8px;padding:10px 20px;}
-.sc{
-  flex:1;background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:7px 4px;text-align:center;
-}
+.sc{flex:1;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 4px;text-align:center;}
 .sv{font-family:var(--mono);font-size:18px;font-weight:700;line-height:1;}
 .sl{font-size:8px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.3px;margin-top:2px;}
 .sc-c .sv{color:var(--green);}
 .sc-w .sv{color:var(--red);}
 .sc-s .sv{color:var(--gold);}
-
 .quiz-body{padding:12px 20px;flex:1;}
-.q-loader{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:60px 20px;gap:14px;
-}
-.crescent-loader{
-  width:44px;height:44px;position:relative;animation:crescentSpin 1.2s linear infinite;
-}
-.crescent-loader::before{
-  content:'☽';font-size:36px;color:var(--green);
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-}
+.q-loader{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:14px;}
+.crescent-loader{width:44px;height:44px;position:relative;animation:crescentSpin 1.2s linear infinite;}
+.crescent-loader::before{content:'☽';font-size:36px;color:var(--green);
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
 @keyframes crescentSpin{to{transform:rotate(360deg);}}
 .load-txt{font-family:var(--mono);font-size:11px;color:var(--ink2);}
 .load-sub{font-family:var(--mono);font-size:9px;color:var(--ink3);}
-
-.q-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:16px;margin-bottom:10px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.3);
-}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:16px;margin-bottom:10px;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
 .q-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
-.q-tag{
-  font-family:var(--mono);font-size:8px;font-weight:700;
-  padding:3px 9px;border-radius:20px;letter-spacing:0.5px;text-transform:uppercase;
-}
+.q-tag{font-family:var(--mono);font-size:8px;font-weight:700;padding:3px 9px;
+  border-radius:20px;letter-spacing:0.5px;text-transform:uppercase;}
 .qt-English{background:rgba(67,97,238,0.15);color:#7b9ef4;}
-.qt-Urdu{background:rgba(236,72,153,0.15);color:#f472b6;font-family:var(--urdu);font-size:11px;letter-spacing:0;}
+.qt-Urdu{background:rgba(236,72,153,0.15);color:#f472b6;}
 .qt-Pedagogy{background:rgba(212,168,67,0.15);color:var(--gold);}
 .qt-Science{background:var(--green-bg);color:var(--green);}
 .qt-GK{background:rgba(229,57,53,0.12);color:#ef9a9a;}
@@ -378,46 +260,46 @@ input:checked + .slider:before{transform:translateX(14px);background-color:#fff;
 .qt-PastPaper{background:rgba(212,168,67,0.15);color:var(--gold);}
 .q-num{font-family:var(--mono);font-size:9px;color:var(--ink3);}
 .q-text{font-size:15px;font-weight:700;line-height:1.6;margin-bottom:16px;}
-.q-text.urdu-q{font-family:var(--urdu);font-size:20px;direction:rtl;line-height:1.8;}
 .options{display:flex;flex-direction:column;gap:8px;}
-.opt{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px;
-  cursor:pointer;transition:all 0.15s;font-size:13px;font-weight:500;
-}
+.opt{background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;display:flex;align-items:center;gap:12px;
+  cursor:pointer;transition:all 0.15s;font-size:13px;font-weight:500;}
 .opt:hover{border-color:var(--green);background:var(--card);}
 .opt.locked{cursor:default;}
 .opt.correct{background:var(--green-bg);border-color:var(--green);color:var(--green);}
 .opt.wrong{background:var(--red-bg);border-color:var(--red);color:var(--red);}
-.opt-ltr{
-  width:24px;height:24px;border-radius:50%;background:var(--bg3);
+.opt-ltr{width:24px;height:24px;border-radius:50%;background:var(--bg3);
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink3);
-  flex-shrink:0;
-}
+  font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink3);flex-shrink:0;}
 .opt.correct .opt-ltr{background:var(--green);color:#fff;}
 .opt.wrong .opt-ltr{background:var(--red);color:#fff;}
-.expl-box{
-  margin-top:16px;padding:14px;background:var(--bg3);
-  border-radius:10px;display:none;animation:fadeIn 0.3s ease both;
-}
+.expl-box{margin-top:16px;padding:14px;background:var(--bg3);border-radius:10px;display:none;animation:fadeIn 0.3s ease both;}
 .expl-box.show{display:block;}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 .expl-label{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px;}
 .expl-correct,.expl-wrong{font-size:12px;line-height:1.6;color:var(--ink2);}
 .expl-wrong{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);}
 .quiz-controls{display:flex;gap:10px;padding:10px 20px 20px;}
-.btn-ctrl{
-  flex:1;padding:14px;border-radius:10px;font-size:14px;font-weight:800;cursor:pointer;
-  transition:all 0.2s;border:none;
-}
+.btn-ctrl{flex:1;padding:14px;border-radius:10px;font-size:14px;font-weight:800;cursor:pointer;transition:all 0.2s;border:none;}
 .btn-skip{background:var(--card);color:var(--ink2);border:1px solid var(--border);}
 .btn-next{background:var(--green);color:#fff;display:none;}
 .btn-skip:hover{border-color:var(--ink2);}
 .btn-next:hover{background:#00c060;}
-
+.btn-bookmark{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:14px 16px;font-size:18px;cursor:pointer;transition:all 0.2s;}
+.btn-bookmark.saved{border-color:var(--gold);background:var(--gold-bg);}
+ 
+/* AI TUTOR */
+.ai-tutor-btn{margin:0 20px 12px;background:var(--card2);border:1px solid var(--border);
+  border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all 0.2s;}
+.ai-tutor-btn:hover{border-color:var(--green);}
+.ai-tutor-btn span{font-size:11px;color:var(--ink2);}
+.ai-tutor-box{margin:0 20px 12px;background:var(--bg3);border:1px solid var(--border);
+  border-radius:10px;padding:14px;display:none;animation:fadeIn 0.3s ease;}
+.ai-tutor-box.show{display:block;}
+.ai-tutor-box p{font-size:12px;color:var(--ink2);line-height:1.7;}
+ 
 /* PAYWALL */
-#paywall-screen{background:var(--bg);}
 .paywall-inner{padding:40px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .paywall-crescent{font-size:48px;color:var(--green);margin-bottom:10px;animation:crescentSpin 4s linear infinite;}
 .paywall-h{font-size:24px;font-weight:900;margin-bottom:6px;}
@@ -429,58 +311,1468 @@ input:checked + .slider:before{transform:translateX(14px);background-color:#fff;
 .dot{width:8px;height:8px;border-radius:50%;background:var(--card2);}
 .dot.used{background:var(--green);box-shadow:0 0 8px var(--green);}
 .plans{width:100%;max-width:320px;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
-.plan-card{
-  background:var(--card);border:2px solid var(--border);
-  border-radius:14px;padding:16px;cursor:pointer;text-align:left;
-  display:flex;align-items:center;justify-content:space-between;
-  transition:all 0.2s;
-}
+.plan-card{background:var(--card);border:2px solid var(--border);border-radius:14px;padding:16px;cursor:pointer;
+  text-align:left;display:flex;align-items:center;justify-content:space-between;transition:all 0.2s;}
 .plan-card.sel{border-color:var(--green);background:var(--bg2);}
 .plan-name{font-size:13px;font-weight:800;margin-bottom:2px;}
 .plan-desc{font-size:10px;color:var(--ink3);}
 .plan-price{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--gold);}
 .plan-per{font-size:9px;color:var(--ink3);text-align:right;}
-.btn-wa{
-  width:100%;max-width:320px;background:#25D366;color:#fff;
-  border:none;border-radius:10px;padding:14px;font-size:14px;font-weight:800;
-  display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;
-  transition:transform 0.2s;
-}
+.btn-wa{width:100%;max-width:320px;background:#25D366;color:#fff;border:none;border-radius:10px;
+  padding:14px;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;
+  gap:10px;cursor:pointer;transition:transform 0.2s;}
 .btn-wa:hover{transform:scale(1.02);}
 .wa-note{font-size:10px;color:var(--ink3);margin-top:10px;font-family:var(--mono);}
 .divider{display:flex;align-items:center;gap:10px;width:100%;max-width:320px;margin:24px 0;}
 .divider-line{flex:1;height:1px;background:var(--border);}
 .divider-txt{font-size:10px;color:var(--ink3);}
 .code-row{display:flex;gap:8px;width:100%;margin-bottom:8px;}
-.code-input{
-  flex:1;background:var(--card);border:1.5px solid var(--border);
-  border-radius:8px;padding:11px 12px;font-family:var(--mono);
-  font-size:13px;color:var(--ink);outline:none;transition:border-color 0.2s;
-  text-transform:uppercase;letter-spacing:1.5px;
-}
+.code-input{flex:1;background:var(--card);border:1.5px solid var(--border);border-radius:8px;
+  padding:11px 12px;font-family:var(--mono);font-size:13px;color:var(--ink);outline:none;
+  transition:border-color 0.2s;text-transform:uppercase;letter-spacing:1.5px;}
 .code-input::placeholder{color:var(--ink3);letter-spacing:0;text-transform:none;}
 .code-input:focus{border-color:var(--green);}
-.btn-unlock{
-  padding:11px 16px;background:var(--green);color:#fff;
-  border:none;border-radius:8px;font-size:12px;font-weight:800;cursor:pointer;
-  transition:all 0.2s;white-space:nowrap;
-}
+.btn-unlock{padding:11px 16px;background:var(--green);color:#fff;border:none;border-radius:8px;
+  font-size:12px;font-weight:800;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
 .btn-unlock:hover{background:#00c060;}
 .code-err{font-size:11px;color:var(--red);font-family:var(--mono);display:none;margin-bottom:4px;}
 .code-ok{font-size:11px;color:var(--green);font-family:var(--mono);display:none;margin-bottom:4px;}
 .paywall-back{font-size:11px;color:var(--ink3);cursor:pointer;text-decoration:underline;margin-top:8px;}
 .paywall-back:hover{color:var(--ink2);}
-
+ 
 /* RESULT */
-#result-screen{background:transparent;}
 .result-body{padding:20px;flex:1;display:flex;flex-direction:column;align-items:center;}
 .score-ring-wrap{position:relative;width:130px;height:130px;margin-bottom:14px;}
 .score-ring-svg{width:130px;height:130px;transform:rotate(-90deg);}
 .score-ring-bg{fill:none;stroke:var(--card2);stroke-width:8;}
 .score-ring-fill{fill:none;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1);}
-.score-ring-inner{
-  position:absolute;inset:0;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-}
+.score-ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .res-pct{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--green);line-height:1;}
-.res-pct
+.res-pct-lbl{font-size:9px;color:var(--ink3);margin-top:2px;}
+.res-grade{font-size:22px;font-weight:900;margin-bottom:4px;letter-spacing:-0.3px;}
+.res-msg{font-size:12px;color:var(--ink2);text-align:center;max-width:280px;margin-bottom:20px;line-height:1.6;}
+.breakdown{background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:16px;width:100%;max-width:400px;margin-bottom:12px;}
+.bd-title{font-family:var(--mono);font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);margin-bottom:12px;}
+.bd-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.bd-row:last-child{margin-bottom:0;}
+.bd-tag{font-family:var(--mono);font-size:8px;font-weight:700;padding:2px 7px;border-radius:4px;min-width:70px;text-align:center;}
+.bd-bar-wrap{flex:1;height:6px;background:var(--bg2);border-radius:3px;overflow:hidden;}
+.bd-bar{height:100%;border-radius:3px;background:var(--green);transition:width 1s ease;}
+.bd-pct{font-family:var(--mono);font-size:9px;color:var(--ink2);min-width:28px;text-align:right;}
+.res-actions{display:flex;gap:10px;width:100%;max-width:400px;margin-bottom:12px;}
+.btn-res{flex:1;padding:12px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;border:none;}
+.btn-res-retry{background:var(--green);color:#fff;}
+.btn-res-share{background:var(--card);color:var(--ink2);border:1px solid var(--border);}
+.btn-res-retry:hover{background:#00c060;}
+.weak-box{background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:14px;width:100%;max-width:400px;margin-bottom:12px;}
+.weak-title{font-family:var(--mono);font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:var(--red);margin-bottom:8px;}
+.weak-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.weak-tag{font-size:10px;background:var(--red-bg);color:var(--red);border:1px solid rgba(229,57,53,0.2);
+  padding:3px 10px;border-radius:20px;font-weight:600;}
+ 
+/* STREAK */
+.streak-bar{display:flex;align-items:center;justify-content:space-between;
+  margin:0 20px 16px;background:var(--card);border:1px solid var(--border);
+  border-radius:10px;padding:10px 14px;}
+.streak-info{display:flex;align-items:center;gap:8px;}
+.streak-fire{font-size:20px;}
+.streak-count{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--gold);}
+.streak-lbl{font-size:10px;color:var(--ink3);}
+ 
+/* LEADERBOARD */
+.lb-screen{padding:16px 20px;}
+.lb-item{display:flex;align-items:center;gap:12px;background:var(--card);
+  border:1px solid var(--border);border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.lb-rank{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--gold);min-width:24px;}
+.lb-name{flex:1;font-size:13px;font-weight:600;}
+.lb-score{font-family:var(--mono);font-size:12px;color:var(--green);}
+.lb-item.me{border-color:var(--green);background:var(--green-bg);}
+ 
+/* BOOKMARKS */
+.bm-screen{padding:16px 20px;}
+.bm-item{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;margin-bottom:10px;cursor:pointer;transition:all 0.2s;}
+.bm-item:hover{border-color:var(--green);}
+.bm-q{font-size:13px;font-weight:600;margin-bottom:4px;}
+.bm-ans{font-size:11px;color:var(--green);font-family:var(--mono);}
+.bm-subj{font-size:9px;color:var(--ink3);font-family:var(--mono);margin-top:4px;}
+ 
+/* MODAL / POPUP */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:100;
+  display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.show{display:flex;}
+.modal-box{background:var(--card);border:1px solid var(--border2);border-radius:16px;
+  padding:24px;width:100%;max-width:340px;animation:fadeIn 0.3s ease;}
+.modal-title{font-size:18px;font-weight:800;margin-bottom:8px;}
+.modal-body{font-size:13px;color:var(--ink2);line-height:1.6;margin-bottom:20px;}
+.modal-actions{display:flex;gap:10px;}
+.btn-modal{flex:1;padding:12px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;border:none;transition:all 0.2s;}
+.btn-modal-primary{background:var(--green);color:#fff;}
+.btn-modal-secondary{background:var(--bg2);color:var(--ink2);}
+ 
+/* READINESS RESULT */
+.readiness-result{padding:20px;text-align:center;}
+.readiness-pct{font-family:var(--mono);font-size:52px;font-weight:700;color:var(--gold);line-height:1;}
+.readiness-lbl{font-size:13px;color:var(--ink2);margin-bottom:20px;}
+.readiness-msg{font-size:15px;font-weight:700;margin-bottom:8px;}
+.subj-breakdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
+.sbd-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px;}
+.sbd-subj{font-size:10px;color:var(--ink3);font-family:var(--mono);margin-bottom:4px;}
+.sbd-pct{font-family:var(--mono);font-size:18px;font-weight:700;}
+.sbd-pct.good{color:var(--green);}
+.sbd-pct.mid{color:var(--amber);}
+.sbd-pct.bad{color:var(--red);}
+ 
+/* AI STUDY PLANNER */
+.planner-screen{padding:16px 20px;}
+.planner-date-row{display:flex;align-items:center;justify-content:space-between;
+  background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:16px;}
+.planner-date-lbl{font-size:12px;color:var(--ink2);}
+.planner-date-val{font-family:var(--mono);font-size:12px;color:var(--gold);}
+.plan-week{display:flex;flex-direction:column;gap:8px;}
+.plan-day{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;}
+.plan-day-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
+.plan-day-name{font-family:var(--mono);font-size:10px;color:var(--green);font-weight:700;}
+.plan-day-hrs{font-family:var(--mono);font-size:9px;color:var(--ink3);}
+.plan-day-tasks{font-size:11px;color:var(--ink2);line-height:1.7;}
+ 
+/* NEGATIVE MARKING INDICATOR */
+.neg-warn{background:var(--red-bg);border:1px solid rgba(229,57,53,0.2);border-radius:8px;
+  padding:6px 12px;margin:0 20px 10px;font-family:var(--mono);font-size:9px;color:var(--red);
+  display:flex;align-items:center;gap:6px;}
+ 
+/* PAST PAPER MODE */
+.pp-year-select{display:flex;gap:8px;padding:0 20px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none;}
+.pp-year-chip{flex-shrink:0;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600;
+  border:1px solid var(--border);color:var(--ink2);cursor:pointer;background:var(--card);transition:all 0.2s;}
+.pp-year-chip.active{background:var(--green);border-color:var(--green);color:#fff;}
+ 
+/* TABS */
+.tab-bar{display:flex;background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5;}
+.tab{flex:1;padding:12px 8px;text-align:center;font-size:11px;font-weight:700;color:var(--ink3);
+  cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;}
+.tab.active{color:var(--green);border-bottom-color:var(--green);}
+ 
+/* NOTIFICATION TOAST */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(100px);
+  background:var(--card);border:1px solid var(--green);border-radius:10px;padding:10px 18px;
+  font-size:12px;font-weight:600;color:var(--green);z-index:200;transition:transform 0.3s;
+  white-space:nowrap;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+ 
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+ 
+<!-- MODAL (End of Test Popup) -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-title" id="modal-title">🏆 Ready for the Real Test?</div>
+    <div class="modal-body" id="modal-body">You've completed multiple sessions! Take your Final Readiness Exam to see how prepared you are.</div>
+    <div class="modal-actions">
+      <button class="btn-modal btn-modal-secondary" onclick="closeModal()">Later</button>
+      <button class="btn-modal btn-modal-primary" id="modal-primary-btn" onclick="goToReadiness()">Take Exam →</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- DATE SET MODAL -->
+<div class="modal-overlay" id="date-modal">
+  <div class="modal-box">
+    <div class="modal-title">📅 Set Your Exam Date</div>
+    <div class="modal-body">Enter your target exam date to start your personal countdown.</div>
+    <input type="date" class="cd-date-input" id="date-modal-input" style="margin-bottom:16px;">
+    <div class="modal-actions">
+      <button class="btn-modal btn-modal-secondary" onclick="closeDateModal()">Cancel</button>
+      <button class="btn-modal btn-modal-primary" onclick="saveExamDate()">Save Date</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- ==================== LANDING ==================== -->
+<div class="screen active" id="landing">
+  <nav class="land-nav">
+    <div class="logo-wrap">
+      <div class="logo-main">Pak<span>Prep</span> Pro</div>
+      <div class="logo-sub">AI-Powered Exam Prep</div>
+    </div>
+    <div class="nav-badge">KPPSC 2026</div>
+  </nav>
+ 
+  <div class="land-hero">
+    <div class="hero-eyebrow">Live — Real MCQs</div>
+    <div class="hero-urdu">پاکستانی امتحانات کی تیاری</div>
+    <h1 class="hero-h1">Crack <span class="green">Any</span> Pakistan<br><span class="gold">Exam</span></h1>
+    <p class="hero-sub">Real MCQs • AI Tutor • Smart Practice • Subject Drill</p>
+    <div class="adv-badge"><span class="flag">🇵🇰</span> KPPSC 2026 — All Posts Covered</div>
+  </div>
+ 
+  <!-- COUNTDOWN -->
+  <div class="countdown-wrap" id="countdown-wrap">
+    <div class="cd-top">
+      <span class="cd-label">⏳ Your Exam Countdown</span>
+      <button class="cd-set-btn" onclick="openDateModal()">Set Date</button>
+    </div>
+    <div class="cd-blocks" id="cd-blocks">
+      <div class="cd-block"><div class="cd-num" id="cd-days">--</div><div class="cd-unit">Days</div></div>
+      <div class="cd-block"><div class="cd-num" id="cd-hrs">--</div><div class="cd-unit">Hrs</div></div>
+      <div class="cd-block"><div class="cd-num" id="cd-mins">--</div><div class="cd-unit">Mins</div></div>
+      <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-unit">Secs</div></div>
+    </div>
+    <div id="cd-no-date" style="text-align:center;font-size:11px;color:var(--ink3);font-family:var(--mono);padding:6px 0;">
+      Tap "Set Date" to start countdown ☝️
+    </div>
+  </div>
+ 
+  <!-- STREAK BAR -->
+  <div class="streak-bar">
+    <div class="streak-info">
+      <span class="streak-fire">🔥</span>
+      <div>
+        <div class="streak-count" id="streak-count">0</div>
+        <div class="streak-lbl">Day Streak</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--mono);font-size:14px;font-weight:700;color:var(--green);" id="total-done">0</div>
+        <div style="font-size:9px;color:var(--ink3);">Done</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--mono);font-size:14px;font-weight:700;color:var(--gold);" id="total-acc">0%</div>
+        <div style="font-size:9px;color:var(--ink3);">Accuracy</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- STAT PILLS -->
+  <div class="stat-row">
+    <div class="stat-pill">📚 <b>2,489</b> Real MCQs</div>
+    <div class="stat-pill">🎯 <b>20</b> Job Posts</div>
+    <div class="stat-pill">🏆 <b>14</b> Subjects</div>
+  </div>
+ 
+  <!-- QUICK NAV TABS -->
+  <div style="display:flex;gap:8px;padding:0 20px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none;">
+    <button onclick="showTab('subjects')" id="tab-subjects" class="dept-chip active">📖 By Subject</button>
+    <button onclick="showTab('jobs')" id="tab-jobs" class="dept-chip">💼 By Job Post</button>
+    <button onclick="showScreen('leaderboard-screen')" class="dept-chip">🏅 Leaderboard</button>
+    <button onclick="showScreen('bookmarks-screen')" class="dept-chip">🔖 Bookmarks</button>
+    <button onclick="showScreen('planner-screen')" class="dept-chip">📅 Planner</button>
+  </div>
+ 
+  <!-- SUBJECT CARDS SECTION -->
+  <div class="subjects-section" id="tab-subjects-section">
+    <div class="section-label">Practice by Subject</div>
+    <div class="subjects-grid" id="subjects-grid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+ 
+  <!-- JOB POST SECTION -->
+  <div id="tab-jobs-section" style="display:none;">
+    <div class="job-search-wrap">
+      <input class="job-search" type="text" placeholder="Search job posts..." id="job-search-input" oninput="filterJobs()">
+    </div>
+    <div class="dept-filter" id="dept-filter">
+      <div class="dept-chip active" onclick="setDept('All',this)">All</div>
+      <div class="dept-chip" onclick="setDept('Education',this)">Education</div>
+      <div class="dept-chip" onclick="setDept('Health',this)">Health</div>
+      <div class="dept-chip" onclick="setDept('Admin',this)">Admin</div>
+      <div class="dept-chip" onclick="setDept('IT',this)">IT</div>
+      <div class="dept-chip" onclick="setDept('Library',this)">Library</div>
+    </div>
+    <div class="jobs-section">
+      <div class="section-label">Select Your Job Post</div>
+      <div class="jobs-grid" id="jobs-grid"><!-- filled by JS --></div>
+    </div>
+  </div>
+ 
+  <div class="land-footer">
+    <span>PakPrep Pro</span> · KPPSC 2026 · All rights reserved
+  </div>
+</div>
+ 
+<!-- ==================== MODE SCREEN ==================== -->
+<div class="screen" id="mode-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('landing')">← Back</button>
+    <div class="sh-title" id="mode-job-title">Select Mode</div>
+    <div class="sh-badge" id="mode-badge">PRACTICE</div>
+  </div>
+ 
+  <div class="mode-job-info" id="mode-job-info">
+    <div class="mji-top">
+      <div class="mji-icon" id="mji-icon">📋</div>
+      <div>
+        <div class="mji-title" id="mji-title">Job Title</div>
+        <div class="mji-dept" id="mji-dept">Department</div>
+      </div>
+    </div>
+    <div class="mji-pattern" id="mji-pattern">Loading syllabus...</div>
+  </div>
+ 
+  <!-- FINAL READINESS CARD -->
+  <div class="final-readiness-card" id="final-readiness-card" onclick="startReadiness()">
+    <div class="fr-head">
+      <div class="fr-icon">🏆</div>
+      <div>
+        <div class="fr-title">Final Readiness Exam</div>
+        <div class="fr-desc">Full-length paper · Exact syllabus ratio · No hints</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="mode-list">
+    <div class="mode-card sel" id="mc-practice" onclick="selectMode('practice')">
+      <div class="mode-head">
+        <span class="mode-icon">⚡</span>
+        <span class="mode-name">Quick Practice</span>
+        <span class="mode-tag-badge tag-free">FREE</span>
+      </div>
+      <div class="mode-desc">5 questions per session. Mixed subjects from your syllabus.</div>
+      <div class="mode-meta-row">
+        <span class="mode-meta-item">5 MCQs</span>
+        <span class="mode-meta-item">~5 mins</span>
+        <span class="mode-meta-item">Instant feedback</span>
+      </div>
+    </div>
+    <div class="mode-card" id="mc-drill" onclick="selectMode('drill')">
+      <div class="mode-head">
+        <span class="mode-icon">🎯</span>
+        <span class="mode-name">Subject Drill</span>
+        <span class="mode-tag-badge tag-free">FREE 5</span>
+      </div>
+      <div class="mode-desc">Focus on one subject. Deep practice until mastery.</div>
+      <div class="mode-meta-row">
+        <span class="mode-meta-item">10 MCQs</span>
+        <span class="mode-meta-item">~10 mins</span>
+        <span class="mode-meta-item">Subject focus</span>
+      </div>
+    </div>
+    <div class="mode-card" id="mc-pastpaper" onclick="selectMode('pastpaper')">
+      <div class="mode-head">
+        <span class="mode-icon">📄</span>
+        <span class="mode-name">Past Papers</span>
+        <span class="mode-tag-badge tag-lock">PREMIUM</span>
+      </div>
+      <div class="mode-desc">Actual past exam papers. Year-by-year practice.</div>
+      <div class="mode-meta-row">
+        <span class="mode-meta-item">Full paper</span>
+        <span class="mode-meta-item">Timed</span>
+        <span class="mode-meta-item">Exam-style</span>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="toggle-row">
+    <span class="toggle-lbl">⚠️ Negative Marking (−0.25)</span>
+    <label class="switch"><input type="checkbox" id="neg-toggle"><span class="slider"></span></label>
+  </div>
+  <div class="note-txt">Premium users get unlimited questions + AI explanations</div>
+ 
+  <button class="btn-start" onclick="startQuiz()">Start Practice →</button>
+</div>
+ 
+<!-- ==================== SUBJECT MODE SCREEN ==================== -->
+<div class="screen" id="subject-mode-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('landing')">← Back</button>
+    <div class="sh-title" id="subj-mode-title">Subject Drill</div>
+    <div class="sh-badge">SUBJECT</div>
+  </div>
+  <div style="padding:20px;">
+    <div class="mode-job-info">
+      <div class="mji-top">
+        <div class="mji-icon" id="subj-icon">📖</div>
+        <div>
+          <div class="mji-title" id="subj-title-display">Subject</div>
+          <div class="mji-dept">Direct subject drill — no job post needed</div>
+        </div>
+      </div>
+    </div>
+    <div class="mode-list" style="padding:0;margin-top:16px;">
+      <div class="mode-card sel">
+        <div class="mode-head"><span class="mode-icon">🎯</span><span class="mode-name">Subject Drill</span><span class="mode-tag-badge tag-free">FREE 5</span></div>
+        <div class="mode-desc">10 questions focused on this subject only.</div>
+      </div>
+    </div>
+    <div class="toggle-row" style="margin:16px 0 10px;">
+      <span class="toggle-lbl">⚠️ Negative Marking (−0.25)</span>
+      <label class="switch"><input type="checkbox" id="neg-toggle-subj"><span class="slider"></span></label>
+    </div>
+    <button class="btn-start" style="margin:0 0 0 0;width:100%;" onclick="startSubjectDrill()">Start Subject Drill →</button>
+  </div>
+</div>
+ 
+<!-- ==================== QUIZ SCREEN ==================== -->
+<div class="screen" id="quiz-screen">
+  <div class="quiz-topbar">
+    <div class="topbar-r1">
+      <div class="q-logo">Pak<span>Prep</span></div>
+      <div class="timer" id="quiz-timer">45:00</div>
+    </div>
+    <div class="prog-row">
+      <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+      <div class="prog-lbl" id="prog-lbl">0/0</div>
+    </div>
+  </div>
+  <div class="score-row">
+    <div class="sc sc-c"><div class="sv" id="sc-correct">0</div><div class="sl">Correct</div></div>
+    <div class="sc sc-w"><div class="sv" id="sc-wrong">0</div><div class="sl">Wrong</div></div>
+    <div class="sc sc-s"><div class="sv" id="sc-skip">0</div><div class="sl">Skip</div></div>
+    <div class="sc"><div class="sv" id="sc-score" style="color:var(--gold)">0</div><div class="sl">Score</div></div>
+  </div>
+  <div id="neg-warn" class="neg-warn" style="display:none;">⚠️ Negative marking ON — −0.25 per wrong answer</div>
+  <div class="quiz-body" id="quiz-body">
+    <div class="q-loader" id="q-loader">
+      <div class="crescent-loader"></div>
+      <div class="load-txt">Loading questions...</div>
+      <div class="load-sub">Fetching from MCQ bank</div>
+    </div>
+  </div>
+  <div class="ai-tutor-btn" id="ai-tutor-btn" onclick="toggleAiTutor()" style="display:none;">
+    <span>🤖</span><span>Ask AI Tutor for explanation</span>
+  </div>
+  <div class="ai-tutor-box" id="ai-tutor-box"></div>
+  <div class="quiz-controls" id="quiz-controls" style="display:none;">
+    <button class="btn-ctrl btn-bookmark" id="btn-bookmark" onclick="toggleBookmark()">🔖</button>
+    <button class="btn-ctrl btn-skip" id="btn-skip" onclick="skipQuestion()">Skip →</button>
+    <button class="btn-ctrl btn-next" id="btn-next" onclick="nextQuestion()">Next →</button>
+  </div>
+</div>
+ 
+<!-- ==================== RESULT SCREEN ==================== -->
+<div class="screen" id="result-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('landing')">← Home</button>
+    <div class="sh-title">Your Result</div>
+    <div class="sh-badge" id="result-badge">DONE</div>
+  </div>
+  <div class="result-body">
+    <div class="score-ring-wrap">
+      <svg class="score-ring-svg" viewBox="0 0 130 130">
+        <circle class="score-ring-bg" cx="65" cy="65" r="55"/>
+        <circle class="score-ring-fill" id="score-ring-fill" cx="65" cy="65" r="55"
+          stroke="var(--green)" stroke-dasharray="345.4" stroke-dashoffset="345.4"/>
+      </svg>
+      <div class="score-ring-inner">
+        <div class="res-pct" id="res-pct">0%</div>
+        <div class="res-pct-lbl">Score</div>
+      </div>
+    </div>
+    <div class="res-grade" id="res-grade">—</div>
+    <div class="res-msg" id="res-msg"></div>
+    <div class="breakdown" id="result-breakdown">
+      <div class="bd-title">Subject Breakdown</div>
+      <div id="bd-rows"></div>
+    </div>
+    <div class="weak-box" id="weak-box" style="display:none;">
+      <div class="weak-title">⚠️ Weak Subjects — Focus Here</div>
+      <div class="weak-tags" id="weak-tags"></div>
+    </div>
+    <div class="res-actions">
+      <button class="btn-res btn-res-retry" onclick="retryQuiz()">🔁 Retry</button>
+      <button class="btn-res btn-res-share" onclick="shareResult()">📤 Share</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- ==================== READINESS RESULT ==================== -->
+<div class="screen" id="readiness-result-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('mode-screen')">← Back</button>
+    <div class="sh-title">Readiness Exam</div>
+    <div class="sh-badge">PREMIUM</div>
+  </div>
+  <div class="readiness-result">
+    <div class="readiness-pct" id="readiness-pct">0%</div>
+    <div class="readiness-lbl">Overall Readiness Score</div>
+    <div class="readiness-msg" id="readiness-msg">Calculating...</div>
+    <div class="subj-breakdown-grid" id="readiness-breakdown"></div>
+    <button class="btn-start" style="margin:0;width:100%;" onclick="showScreen('mode-screen')">← Back to Practice</button>
+  </div>
+</div>
+ 
+<!-- ==================== PAYWALL ==================== -->
+<div class="screen" id="paywall-screen">
+  <div class="paywall-inner">
+    <div class="paywall-crescent">☽</div>
+    <div class="paywall-h">Unlock Full Access</div>
+    <div class="paywall-sub">You've used your 5 free questions. Upgrade to continue practicing with 2,489 real MCQs.</div>
+    <div class="paywall-job-name" id="paywall-job-name">KPPSC 2026</div>
+    <div class="used-bar">
+      <span class="used-lbl">Free questions used</span>
+      <div class="used-dots">
+        <div class="dot used"></div><div class="dot used"></div><div class="dot used"></div>
+        <div class="dot used"></div><div class="dot used"></div>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan-card sel" onclick="selectPlan(this,'weekly')">
+        <div><div class="plan-name">Weekly</div><div class="plan-desc">7 days full access</div></div>
+        <div><div class="plan-price">Rs 199</div><div class="plan-per">/ week</div></div>
+      </div>
+      <div class="plan-card" onclick="selectPlan(this,'monthly')">
+        <div><div class="plan-name">Monthly</div><div class="plan-desc">30 days + all features</div></div>
+        <div><div class="plan-price">Rs 499</div><div class="plan-per">/ month</div></div>
+      </div>
+      <div class="plan-card" onclick="selectPlan(this,'full')">
+        <div><div class="plan-name">Full Prep</div><div class="plan-desc">Until exam day 🏆</div></div>
+        <div><div class="plan-price">Rs 999</div><div class="plan-per">one-time</div></div>
+      </div>
+    </div>
+    <button class="btn-wa" onclick="openWhatsApp()">
+      <span style="font-size:20px;">💬</span> Pay via WhatsApp
+    </button>
+    <div class="wa-note">Message us · Instant activation · Secure</div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-txt">or enter code</div><div class="divider-line"></div></div>
+    <div style="width:100%;max-width:320px;">
+      <div class="code-row">
+        <input class="code-input" id="code-input" placeholder="Enter unlock code" maxlength="20">
+        <button class="btn-unlock" onclick="tryUnlockCode()">Unlock</button>
+      </div>
+      <div class="code-err" id="code-err">❌ Invalid code. Try again.</div>
+      <div class="code-ok" id="code-ok">✅ Unlocked! Enjoy full access.</div>
+    </div>
+    <div class="paywall-back" onclick="showScreen('landing')">← Back to Home</div>
+  </div>
+</div>
+ 
+<!-- ==================== LEADERBOARD ==================== -->
+<div class="screen" id="leaderboard-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('landing')">← Back</button>
+    <div class="sh-title">Leaderboard</div>
+    <div class="sh-badge">TOP 10</div>
+  </div>
+  <div class="lb-screen" id="lb-list"><!-- filled by JS --></div>
+</div>
+ 
+<!-- ==================== BOOKMARKS ==================== -->
+<div class="screen" id="bookmarks-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('landing')">← Back</button>
+    <div class="sh-title">Bookmarks</div>
+    <div class="sh-badge" id="bm-count">0</div>
+  </div>
+  <div class="bm-screen" id="bm-list"><!-- filled by JS --></div>
+</div>
+ 
+<!-- ==================== PLANNER ==================== -->
+<div class="screen" id="planner-screen">
+  <div class="screen-header">
+    <button class="btn-back" onclick="showScreen('landing')">← Back</button>
+    <div class="sh-title">AI Study Planner</div>
+    <div class="sh-badge">7-DAY</div>
+  </div>
+  <div class="planner-screen">
+    <div class="planner-date-row">
+      <span class="planner-date-lbl">🎯 Exam Date</span>
+      <span class="planner-date-val" id="planner-exam-date">Not set</span>
+    </div>
+    <div class="plan-week" id="plan-week"><!-- filled by JS --></div>
+  </div>
+</div>
+ 
+<script>
+// ============================================================
+// STATE
+// ============================================================
+const VALID_CODES = ['STITCHAI2025','KPPSC2026'];
+let state = {
+  isPremium: false,
+  streak: 0,
+  lastPlayed: null,
+  totalDone: 0,
+  totalCorrect: 0,
+  bookmarks: [],
+  examDate: null,
+  sessionsDone: 0,
+  currentJob: null,
+  currentSubject: null,
+  currentMode: 'practice',
+  selectedPlan: 'weekly',
+  mcqBank: null,
+  bankLoaded: false
+};
+ 
+// ============================================================
+// JOBS DATA
+// ============================================================
+const JOBS = [
+  {id:'sst_general',icon:'🏫',title:'SST (General)',dept:'Education',bps:'BPS-15',mcq:100,
+   subjects:['English','Urdu','GK','Pedagogy','Science'],
+   pattern:'English: 20% | Urdu: 15% | GK: 20% | Pedagogy: 25% | Science: 20%'},
+  {id:'sst_maths',icon:'📐',title:'SST (Maths)',dept:'Education',bps:'BPS-15',mcq:100,
+   subjects:['English','Maths','GK','Pedagogy','Physics'],
+   pattern:'English: 20% | Maths: 25% | GK: 15% | Pedagogy: 20% | Physics: 20%'},
+  {id:'sst_science',icon:'🔬',title:'SST (Science)',dept:'Education',bps:'BPS-15',mcq:100,
+   subjects:['English','Science','GK','Pedagogy','Biology'],
+   pattern:'English: 20% | Science: 25% | GK: 15% | Pedagogy: 20% | Biology: 20%'},
+  {id:'sst_bio',icon:'🧬',title:'SST (Bio/Chemistry)',dept:'Education',bps:'BPS-15',mcq:100,
+   subjects:['English','Biology','Chemistry','GK','Pedagogy'],
+   pattern:'English: 15% | Biology: 25% | Chemistry: 25% | GK: 15% | Pedagogy: 20%'},
+  {id:'sst_it',icon:'💻',title:'SST (IT)',dept:'Education',bps:'BPS-15',mcq:100,
+   subjects:['English','IT','GK','Pedagogy','Maths'],
+   pattern:'English: 15% | IT: 30% | GK: 15% | Pedagogy: 25% | Maths: 15%'},
+  {id:'sr_librarian',icon:'📚',title:'Sr. Librarian',dept:'Library',bps:'BPS-16',mcq:100,
+   subjects:['English','Library','GK','IT'],
+   pattern:'English: 25% | Library: 35% | GK: 20% | IT: 20%'},
+  {id:'librarian',icon:'📖',title:'Librarian',dept:'Library',bps:'BPS-14',mcq:100,
+   subjects:['English','Library','GK','Urdu'],
+   pattern:'English: 25% | Library: 30% | GK: 25% | Urdu: 20%'},
+  {id:'auditor',icon:'🧾',title:'Auditor',dept:'Admin',bps:'BPS-16',mcq:100,
+   subjects:['English','Accounting','Maths','GK'],
+   pattern:'English: 20% | Accounting: 35% | Maths: 25% | GK: 20%'},
+  {id:'steno',icon:'⌨️',title:'Stenographer',dept:'Admin',bps:'BPS-15',mcq:100,
+   subjects:['English','IT','GK','Steno'],
+   pattern:'English: 30% | IT: 25% | GK: 25% | Steno: 20%'},
+  {id:'jail_super',icon:'🏛️',title:'Asst. Superintendent Jail',dept:'Admin',bps:'BPS-14',mcq:100,
+   subjects:['English','Law','GK','Urdu'],
+   pattern:'English: 25% | Law: 30% | GK: 25% | Urdu: 20%'},
+  {id:'network_admin',icon:'🌐',title:'Asst. Network Admin',dept:'IT',bps:'BPS-14',mcq:100,
+   subjects:['English','IT','Networking','GK'],
+   pattern:'English: 20% | IT: 30% | Networking: 30% | GK: 20%'},
+  {id:'charge_nurse',icon:'💊',title:'Charge Nurse',dept:'Health',bps:'BPS-14',mcq:100,
+   subjects:['English','Nursing','GK','Science'],
+   pattern:'English: 20% | Nursing: 40% | GK: 20% | Science: 20%'},
+  {id:'dental_surgeon',icon:'🦷',title:'Dental Surgeon',dept:'Health',bps:'BPS-17',mcq:100,
+   subjects:['English','Dental','GK','Science'],
+   pattern:'English: 15% | Dental: 50% | GK: 15% | Science: 20%'},
+  {id:'preservation',icon:'📁',title:'Preservation Asst.',dept:'Admin',bps:'BPS-11',mcq:100,
+   subjects:['English','Archives','GK','Urdu'],
+   pattern:'English: 25% | Archives: 30% | GK: 25% | Urdu: 20%'},
+  {id:'store_keeper',icon:'🏪',title:'Store Keeper',dept:'Admin',bps:'BPS-11',mcq:100,
+   subjects:['English','Store','GK','Maths'],
+   pattern:'English: 25% | Store: 30% | GK: 25% | Maths: 20%'},
+];
+ 
+// ============================================================
+// SUBJECTS
+// ============================================================
+const SUBJECTS = [
+  {key:'English',icon:'🔤',name:'English'},
+  {key:'Urdu',icon:'اردو',name:'Urdu'},
+  {key:'GK',icon:'🌍',name:'General Knowledge'},
+  {key:'Maths',icon:'➗',name:'Maths'},
+  {key:'Science',icon:'🔬',name:'Science'},
+  {key:'Physics',icon:'⚛️',name:'Physics'},
+  {key:'Biology',icon:'🧬',name:'Biology'},
+  {key:'Chemistry',icon:'🧪',name:'Chemistry'},
+  {key:'IT',icon:'💻',name:'IT / Computer'},
+  {key:'Pedagogy',icon:'🏫',name:'Pedagogy'},
+  {key:'Library',icon:'📚',name:'Library Science'},
+  {key:'Accounting',icon:'🧾',name:'Accounting'},
+  {key:'Law',icon:'⚖️',name:'Law'},
+  {key:'PastPaper',icon:'📄',name:'Past Papers'},
+];
+ 
+// ============================================================
+// FALLBACK MCQ BANK (used until mcq_bank.json loads)
+// ============================================================
+const FALLBACK_BANK = {
+  English:[
+    {q:"The synonym of 'Benevolent' is:",opts:["Cruel","Kind","Angry","Sad"],ans:1,exp:"Benevolent means well-meaning and kindly.",wrng:"Cruel is the antonym."},
+    {q:"Choose the correct spelling:",opts:["Accomodate","Accommodate","Acommodate","Acomodate"],ans:1,exp:"Accommodate has double 'c' and double 'm'.",wrng:"All others have spelling errors."},
+    {q:"The antonym of 'Verbose' is:",opts:["Talkative","Wordy","Concise","Lengthy"],ans:2,exp:"Verbose means using more words than needed; concise is its opposite.",wrng:"Talkative and wordy are synonyms of verbose."},
+    {q:"'She is good __ English.' Fill in the blank:",opts:["in","at","on","with"],ans:1,exp:"'Good at' is the correct preposition phrase.",wrng:"'Good in' is incorrect usage."},
+    {q:"Plural of 'Ox' is:",opts:["Oxes","Ox","Oxen","Oxs"],ans:2,exp:"Ox is an irregular noun; its plural is Oxen.",wrng:"Oxes and Oxs are not valid English words."},
+  ],
+  GK:[
+    {q:"The capital of Pakistan is:",opts:["Lahore","Karachi","Islamabad","Peshawar"],ans:2,exp:"Islamabad has been the capital of Pakistan since 1963.",wrng:"Karachi was the first capital."},
+    {q:"Pakistan got independence in:",opts:["1946","1947","1948","1945"],ans:1,exp:"Pakistan became independent on August 14, 1947.",wrng:"1948 is when some territories were finalized."},
+    {q:"The national language of Pakistan is:",opts:["Punjabi","Pashto","Sindhi","Urdu"],ans:3,exp:"Urdu is the national language of Pakistan.",wrng:"Punjabi is the most spoken but not national language."},
+    {q:"KPK stands for:",opts:["Khyber Pakhtunkhwa","Karachi Port Karachi","Khyber Port Khalid","None"],ans:0,exp:"KPK is the abbreviation of Khyber Pakhtunkhwa province.",wrng:"The other options are invented."},
+    {q:"KPPSC stands for:",opts:["KPK Public Service Commission","Karachi Police Service Corp","KP Primary School Council","None"],ans:0,exp:"KPPSC = Khyber Pakhtunkhwa Public Service Commission.",wrng:"The other options are incorrect."},
+  ],
+  Maths:[
+    {q:"What is 15% of 200?",opts:["25","30","35","40"],ans:1,exp:"15% × 200 = 30.",wrng:"Calculate: 200 × 15/100 = 30."},
+    {q:"The square root of 144 is:",opts:["11","12","13","14"],ans:1,exp:"12 × 12 = 144.",wrng:"Check: 11²=121, 13²=169."},
+    {q:"If x + 5 = 12, then x =",opts:["5","6","7","8"],ans:2,exp:"x = 12 - 5 = 7.",wrng:"Simple subtraction."},
+    {q:"LCM of 4 and 6 is:",opts:["12","24","8","6"],ans:0,exp:"LCM(4,6) = 12.",wrng:"LCM is the smallest common multiple."},
+    {q:"A train travels 120 km in 2 hours. Speed =",opts:["40 km/h","50 km/h","60 km/h","70 km/h"],ans:2,exp:"Speed = Distance/Time = 120/2 = 60 km/h.",wrng:"Apply formula correctly."},
+  ],
+  Pedagogy:[
+    {q:"The father of modern education is:",opts:["Plato","Rousseau","John Dewey","Aristotle"],ans:2,exp:"John Dewey is widely called the father of modern education.",wrng:"Plato and Aristotle are ancient Greek philosophers."},
+    {q:"Bloom's Taxonomy was published in:",opts:["1946","1956","1966","1976"],ans:1,exp:"Benjamin Bloom published his taxonomy in 1956.",wrng:"1956 is the correct year."},
+    {q:"The best method for teaching young children is:",opts:["Lecture","Play way","Rote learning","Dictation"],ans:1,exp:"Play way method is most effective for young children.",wrng:"Lecture method is for older students."},
+    {q:"IQ stands for:",opts:["Intelligence Quota","Intelligence Quotient","Intelligent Query","None"],ans:1,exp:"IQ = Intelligence Quotient, measuring cognitive ability.",wrng:"Quota and Query are incorrect expansions."},
+    {q:"Formative assessment is done:",opts:["At end of year","Before teaching","During teaching","After exam"],ans:2,exp:"Formative assessment occurs during the learning process.",wrng:"Summative is at the end."},
+  ],
+  Science:[
+    {q:"The chemical symbol of water is:",opts:["HO","H2O","H3O","OH"],ans:1,exp:"Water is composed of 2 hydrogen and 1 oxygen atoms.",wrng:"H3O is hydronium ion."},
+    {q:"The speed of light is approximately:",opts:["3×10⁶ m/s","3×10⁸ m/s","3×10¹⁰ m/s","3×10⁴ m/s"],ans:1,exp:"Speed of light = 3×10⁸ metres per second.",wrng:"3×10⁶ is too slow for light."},
+    {q:"Photosynthesis occurs in:",opts:["Mitochondria","Nucleus","Chloroplast","Ribosome"],ans:2,exp:"Chloroplasts contain chlorophyll for photosynthesis.",wrng:"Mitochondria is for respiration."},
+    {q:"The human body has how many bones?",opts:["196","206","216","186"],ans:1,exp:"An adult human body has 206 bones.",wrng:"Infants have more (~270) that fuse over time."},
+    {q:"Gravity on Earth is approximately:",opts:["8.8 m/s²","9.8 m/s²","10.8 m/s²","7.8 m/s²"],ans:1,exp:"Acceleration due to gravity = 9.8 m/s².",wrng:"10 m/s² is used as approximation in calculations."},
+  ],
+  Physics:[
+    {q:"Newton's first law is also called:",opts:["Law of Force","Law of Inertia","Law of Motion","Law of Gravity"],ans:1,exp:"Newton's first law describes inertia — objects at rest stay at rest.",wrng:"Law of Force relates to second law."},
+    {q:"The unit of electric current is:",opts:["Volt","Watt","Ampere","Ohm"],ans:2,exp:"Ampere (A) is the SI unit of electric current.",wrng:"Volt is for voltage, Ohm for resistance."},
+    {q:"Sound cannot travel through:",opts:["Water","Air","Vacuum","Steel"],ans:2,exp:"Sound needs a medium; vacuum has no particles.",wrng:"Sound travels through solids, liquids, and gases."},
+  ],
+  Biology:[
+    {q:"DNA stands for:",opts:["Deoxyribose Nucleic Acid","Deoxyribonucleic Acid","Dioxyribonucleic Acid","None"],ans:1,exp:"DNA = Deoxyribonucleic Acid, carrier of genetic info.",wrng:"Option A has a slight spelling variation."},
+    {q:"The powerhouse of the cell is:",opts:["Nucleus","Ribosome","Mitochondria","Vacuole"],ans:2,exp:"Mitochondria produce ATP energy for the cell.",wrng:"Nucleus is the control center."},
+    {q:"Blood group discovered by:",opts:["Fleming","Landsteiner","Darwin","Pasteur"],ans:1,exp:"Karl Landsteiner discovered ABO blood groups in 1901.",wrng:"Fleming discovered penicillin."},
+  ],
+  Chemistry:[
+    {q:"The atomic number of Carbon is:",opts:["5","6","7","8"],ans:1,exp:"Carbon has 6 protons, so atomic number = 6.",wrng:"Nitrogen has atomic number 7."},
+    {q:"pH of pure water is:",opts:["5","6","7","8"],ans:2,exp:"Pure water is neutral with pH = 7.",wrng:"Below 7 is acidic, above 7 is basic."},
+    {q:"The formula of common salt is:",opts:["KCl","NaCl","MgCl","CaCl"],ans:1,exp:"Common salt = Sodium Chloride = NaCl.",wrng:"KCl is potassium chloride."},
+  ],
+  IT:[
+    {q:"CPU stands for:",opts:["Central Process Unit","Central Processing Unit","Computer Processing Unit","Core Processing Unit"],ans:1,exp:"CPU = Central Processing Unit, the brain of a computer.",wrng:"Process Unit is not the standard term."},
+    {q:"HTML stands for:",opts:["Hyper Text Markup Language","High Text Making Language","Hyper Text Making Language","None"],ans:0,exp:"HTML = HyperText Markup Language, used for web pages.",wrng:"The other expansions are incorrect."},
+    {q:"Which is not an operating system?",opts:["Windows","Linux","Oracle","macOS"],ans:2,exp:"Oracle is a database system, not an OS.",wrng:"Windows, Linux, macOS are all operating systems."},
+  ],
+  Library:[
+    {q:"DDC stands for:",opts:["Dewey Decimal Classification","Digital Data Coding","Document Decimal Code","None"],ans:0,exp:"DDC = Dewey Decimal Classification system for libraries.",wrng:"Digital Data Coding is not a library term."},
+    {q:"OPAC stands for:",opts:["Open Public Access Catalog","Online Public Access Catalog","Open Print Access Catalog","None"],ans:1,exp:"OPAC = Online Public Access Catalog, used to search library holdings.",wrng:"Open and Print are incorrect words."},
+    {q:"The father of Library Science is:",opts:["Melvil Dewey","S.R. Ranganathan","Charles Jewett","None"],ans:1,exp:"S.R. Ranganathan is considered the father of Library Science.",wrng:"Melvil Dewey created the Dewey Decimal System."},
+  ],
+  Accounting:[
+    {q:"The accounting equation is:",opts:["Assets = Liabilities - Equity","Assets = Liabilities + Equity","Assets + Liabilities = Equity","None"],ans:1,exp:"Assets = Liabilities + Owner's Equity is the fundamental accounting equation.",wrng:"Other arrangements are incorrect."},
+    {q:"Depreciation is charged on:",opts:["Current assets","Fixed assets","Liquid assets","All assets"],ans:1,exp:"Depreciation is charged on fixed (non-current) assets.",wrng:"Current assets are not depreciated."},
+    {q:"Double entry system means:",opts:["Two books","Every transaction has two aspects","Two accountants","None"],ans:1,exp:"Every transaction affects at least two accounts (debit and credit).",wrng:"The number of books or accountants is irrelevant."},
+  ],
+  Law:[
+    {q:"The Constitution of Pakistan was adopted in:",opts:["1971","1972","1973","1974"],ans:2,exp:"Pakistan's current constitution was adopted on 14 August 1973.",wrng:"1972 was when it was drafted."},
+    {q:"Fundamental rights are in which part of Constitution?",opts:["Part I","Part II","Part III","Part IV"],ans:1,exp:"Fundamental rights are enshrined in Part II of Pakistan's Constitution.",wrng:"Part I covers the republic."},
+    {q:"Habeas Corpus means:",opts:["You have the body","Right to vote","Right to speech","None"],ans:0,exp:"Habeas Corpus is a legal writ meaning 'you have the body' — protecting against unlawful detention.",wrng:"It has nothing to do with voting or speech."},
+  ],
+  PastPaper:[
+    {q:"KPPSC was established in:",opts:["1947","1970","2001","1999"],ans:0,exp:"KPPSC was established in 1947 after Pakistan's independence.",wrng:"The others are incorrect years."},
+    {q:"The headquarter of KPPSC is in:",opts:["Peshawar","Abbottabad","Mardan","Kohat"],ans:0,exp:"KPPSC is headquartered in Peshawar, the provincial capital.",wrng:"Abbottabad and Mardan are other KPK cities."},
+    {q:"Maximum marks in written test of KPPSC is usually:",opts:["50","100","150","200"],ans:1,exp:"Most KPPSC written exams are out of 100 marks.",wrng:"Some posts may vary."},
+  ],
+  Urdu:[
+    {q:"اردو کا پہلا شاعر کون ہے؟",opts:["میر تقی میر","غالب","امیر خسرو","انیس"],ans:2,exp:"امیر خسرو کو اردو شاعری کا بانی سمجھا جاتا ہے۔",wrng:"میر تقی میر بعد میں آئے۔"},
+    {q:"غالب کا پورا نام کیا تھا؟",opts:["مرزا اسد اللہ خان","مرزا غلام حسین","سید ضامن علی","نواب مرزا"],ans:0,exp:"مرزا اسداللہ خان غالب۔",wrng:"باقی نام درست نہیں ہیں۔"},
+  ],
+  Nursing:[],Dental:[],Steno:[],Archives:[],Networking:[],Store:[]
+};
+ 
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  loadState();
+  renderSubjects();
+  renderJobs();
+  renderLeaderboard();
+  renderBookmarks();
+  renderPlanner();
+  updateStreakDisplay();
+  startCountdown();
+  fetchMcqBank();
+}
+ 
+function loadState() {
+  try {
+    const s = localStorage.getItem('pakprep_state');
+    if (s) Object.assign(state, JSON.parse(s));
+  } catch(e){}
+}
+ 
+function saveState() {
+  try { localStorage.setItem('pakprep_state', JSON.stringify(state)); } catch(e){}
+}
+ 
+// ============================================================
+// MCQ BANK FETCH
+// ============================================================
+async function fetchMcqBank() {
+  try {
+    const res = await fetch('mcq_bank.json');
+    if (res.ok) {
+      state.mcqBank = await res.json();
+      state.bankLoaded = true;
+      showToast('✅ MCQ Bank loaded — 2,489 questions ready!');
+    }
+  } catch(e) {
+    // Use fallback
+    state.mcqBank = FALLBACK_BANK;
+  }
+}
+ 
+function getBank() {
+  return state.mcqBank || FALLBACK_BANK;
+}
+ 
+// ============================================================
+// COUNTDOWN
+// ============================================================
+function startCountdown() {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
+ 
+function updateCountdown() {
+  const dateStr = state.examDate;
+  const noDate = document.getElementById('cd-no-date');
+  const cdBlocks = document.getElementById('cd-blocks');
+  if (!dateStr) {
+    noDate.style.display = 'block';
+    cdBlocks.style.display = 'none';
+    return;
+  }
+  noDate.style.display = 'none';
+  cdBlocks.style.display = 'flex';
+  const now = new Date();
+  const target = new Date(dateStr);
+  const diff = target - now;
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '00';
+    document.getElementById('cd-hrs').textContent = '00';
+    document.getElementById('cd-mins').textContent = '00';
+    document.getElementById('cd-secs').textContent = '00';
+    return;
+  }
+  const days = Math.floor(diff / 86400000);
+  const hrs = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  const secs = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+  document.getElementById('cd-hrs').textContent = String(hrs).padStart(2,'0');
+  document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+  document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+  const plannerDate = document.getElementById('planner-exam-date');
+  if (plannerDate) plannerDate.textContent = new Date(dateStr).toLocaleDateString('en-PK',{day:'numeric',month:'long',year:'numeric'});
+}
+ 
+function openDateModal() {
+  document.getElementById('date-modal').classList.add('show');
+  if (state.examDate) document.getElementById('date-modal-input').value = state.examDate;
+}
+function closeDateModal() { document.getElementById('date-modal').classList.remove('show'); }
+function saveExamDate() {
+  const val = document.getElementById('date-modal-input').value;
+  if (!val) { showToast('Please pick a date'); return; }
+  state.examDate = val;
+  saveState();
+  closeDateModal();
+  updateCountdown();
+  renderPlanner();
+  showToast('📅 Exam date saved!');
+}
+ 
+// ============================================================
+// STREAK
+// ============================================================
+function updateStreak() {
+  const today = new Date().toDateString();
+  if (state.lastPlayed === today) return;
+  const yesterday = new Date(Date.now()-86400000).toDateString();
+  if (state.lastPlayed === yesterday) state.streak++;
+  else state.streak = 1;
+  state.lastPlayed = today;
+  saveState();
+  updateStreakDisplay();
+}
+ 
+function updateStreakDisplay() {
+  document.getElementById('streak-count').textContent = state.streak;
+  document.getElementById('total-done').textContent = state.totalDone;
+  const acc = state.totalDone > 0 ? Math.round((state.totalCorrect/state.totalDone)*100) : 0;
+  document.getElementById('total-acc').textContent = acc + '%';
+}
+ 
+// ============================================================
+// RENDER SUBJECTS
+// ============================================================
+function renderSubjects() {
+  const grid = document.getElementById('subjects-grid');
+  grid.innerHTML = SUBJECTS.map(s => `
+    <div class="subject-card" onclick="openSubjectMode('${s.key}')">
+      <span class="subj-icon">${s.icon}</span>
+      <span class="subj-name">${s.name}</span>
+    </div>
+  `).join('');
+}
+ 
+function showTab(tab) {
+  document.getElementById('tab-subjects-section').style.display = tab==='subjects'?'block':'none';
+  document.getElementById('tab-jobs-section').style.display = tab==='jobs'?'block':'none';
+  document.querySelectorAll('#tab-subjects,#tab-jobs').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+}
+ 
+// ============================================================
+// RENDER JOBS
+// ============================================================
+let currentDept = 'All';
+function renderJobs(filter='') {
+  const grid = document.getElementById('jobs-grid');
+  const filtered = JOBS.filter(j => {
+    const matchDept = currentDept==='All' || j.dept===currentDept;
+    const matchSearch = !filter || j.title.toLowerCase().includes(filter.toLowerCase());
+    return matchDept && matchSearch;
+  });
+  if (!filtered.length) { grid.innerHTML='<div class="no-jobs" style="grid-column:span 2">No jobs found</div>'; return; }
+  grid.innerHTML = filtered.map((j,i) => `
+    <div class="job-card" style="animation-delay:${i*0.05}s" onclick="openJob('${j.id}')">
+      <div class="job-icon">${j.icon}</div>
+      <div class="job-title">${j.title}</div>
+      <div class="job-dept">${j.dept}</div>
+      <div class="job-meta">
+        <span class="job-tag tag-bps">${j.bps}</span>
+        <span class="job-tag tag-mcq">${j.mcq} MCQ</span>
+      </div>
+    </div>
+  `).join('');
+}
+ 
+function filterJobs() {
+  renderJobs(document.getElementById('job-search-input').value);
+}
+ 
+function setDept(dept, el) {
+  currentDept = dept;
+  document.querySelectorAll('.dept-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  renderJobs(document.getElementById('job-search-input').value);
+}
+ 
+// ============================================================
+// OPEN JOB / SUBJECT MODE
+// ============================================================
+function openJob(id) {
+  const job = JOBS.find(j=>j.id===id);
+  if (!job) return;
+  state.currentJob = job;
+  state.currentSubject = null;
+  document.getElementById('mode-job-title').textContent = job.title;
+  document.getElementById('mode-badge').textContent = job.bps;
+  document.getElementById('mji-icon').textContent = job.icon;
+  document.getElementById('mji-title').textContent = job.title;
+  document.getElementById('mji-dept').textContent = job.dept;
+  document.getElementById('mji-pattern').innerHTML = job.pattern.replace(/\|/g,'<br>').replace(/(\w+:)/g,'<b>$1</b>');
+  document.getElementById('mode-job-info').style.display = 'block';
+  document.getElementById('final-readiness-card').style.display = state.isPremium ? 'block' : 'block';
+  showScreen('mode-screen');
+}
+ 
+function openSubjectMode(subjectKey) {
+  state.currentSubject = subjectKey;
+  state.currentJob = null;
+  const subj = SUBJECTS.find(s=>s.key===subjectKey);
+  document.getElementById('subj-icon').textContent = subj ? subj.icon : '📖';
+  document.getElementById('subj-title-display').textContent = subj ? subj.name : subjectKey;
+  document.getElementById('subj-mode-title').textContent = subj ? subj.name : subjectKey;
+  showScreen('subject-mode-screen');
+}
+ 
+// ============================================================
+// MODE SELECTION
+// ============================================================
+let selectedMode = 'practice';
+function selectMode(mode) {
+  selectedMode = mode;
+  document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('sel'));
+  document.getElementById('mc-'+mode).classList.add('sel');
+}
+ 
+// ============================================================
+// QUIZ ENGINE
+// ============================================================
+let quiz = {
+  questions:[],current:0,correct:0,wrong:0,skipped:0,score:0,
+  negMarking:false,isReadiness:false,answered:false,
+  subjectStats:{},startTime:null,timerInterval:null,timeLimit:2700
+};
+ 
+function startQuiz() {
+  const job = state.currentJob;
+  if (!job) return;
+  const negOn = document.getElementById('neg-toggle').checked;
+  const bank = getBank();
+  const qs = buildQuestions(job.subjects, state.isPremium ? 30 : 5, bank);
+  launchQuiz(qs, negOn, false);
+}
+ 
+function startSubjectDrill() {
+  const subj = state.currentSubject;
+  if (!subj) return;
+  const negOn = document.getElementById('neg-toggle-subj').checked;
+  const bank = getBank();
+  const qs = buildQuestionsForSubject(subj, state.isPremium ? 10 : 5, bank);
+  launchQuiz(qs, negOn, false);
+}
+ 
+function startReadiness() {
+  if (!state.isPremium) { showScreen('paywall-screen'); return; }
+  const job = state.currentJob;
+  if (!job) return;
+  const bank = getBank();
+  const qs = buildQuestions(job.subjects, 50, bank);
+  launchQuiz(qs, true, true);
+}
+ 
+function buildQuestions(subjects, total, bank) {
+  const perSubject = Math.floor(total / subjects.length);
+  const qs = [];
+  subjects.forEach(subj => {
+    const pool = bank[subj] || FALLBACK_BANK[subj] || [];
+    const shuffled = [...pool].sort(()=>Math.random()-0.5);
+    shuffled.slice(0, perSubject).forEach(q => qs.push({...q, subject:subj}));
+  });
+  // Fill remaining
+  const remaining = total - qs.length;
+  if (remaining > 0 && subjects.length > 0) {
+    const pool = bank[subjects[0]] || FALLBACK_BANK[subjects[0]] || [];
+    const extra = [...pool].sort(()=>Math.random()-0.5).slice(0, remaining);
+    extra.forEach(q => qs.push({...q, subject:subjects[0]}));
+  }
+  return qs.sort(()=>Math.random()-0.5);
+}
+ 
+function buildQuestionsForSubject(subj, total, bank) {
+  const pool = bank[subj] || FALLBACK_BANK[subj] || [];
+  if (!pool.length) {
+    // AI fallback placeholder
+    return Array.from({length:Math.min(total,5)}, (_,i) => ({
+      q: `Sample ${subj} question ${i+1} (AI generated — upload mcq_bank.json for real MCQs)`,
+      opts:['Option A','Option B','Option C','Option D'],ans:0,
+      exp:`This is a placeholder. Upload mcq_bank.json for real ${subj} MCQs.`,
+      wrng:'AI fallback active.',subject:subj
+    }));
+  }
+  return [...pool].sort(()=>Math.random()-0.5).slice(0,total).map(q=>({...q,subject:subj}));
+}
+ 
+function launchQuiz(questions, negMarking, isReadiness) {
+  quiz = {
+    questions, current:0, correct:0, wrong:0, skipped:0, score:0,
+    negMarking, isReadiness, answered:false, subjectStats:{},
+    startTime:Date.now(), timerInterval:null,
+    timeLimit: isReadiness ? 3600 : (questions.length * 90)
+  };
+  showScreen('quiz-screen');
+  document.getElementById('neg-warn').style.display = negMarking ? 'flex' : 'none';
+  document.getElementById('quiz-controls').style.display = 'none';
+  document.getElementById('ai-tutor-btn').style.display = 'none';
+  document.getElementById('ai-tutor-box').classList.remove('show');
+  startQuizTimer();
+  renderQuestion();
+}
+ 
+function startQuizTimer() {
+  if (quiz.timerInterval) clearInterval(quiz.timerInterval);
+  let remaining = quiz.timeLimit;
+  quiz.timerInterval = setInterval(() => {
+    remaining--;
+    const m = Math.floor(remaining/60), s = remaining%60;
+    const timerEl = document.getElementById('quiz-timer');
+    timerEl.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    timerEl.classList.toggle('urgent', remaining < 60);
+    if (remaining <= 0) { clearInterval(quiz.timerInterval); finishQuiz(); }
+  }, 1000);
+}
+ 
+function renderQuestion() {
+  const q = quiz.questions[quiz.current];
+  if (!q) { finishQuiz(); return; }
+  quiz.answered = false;
+ 
+  // Check paywall (free = 5 questions)
+  if (!state.isPremium && quiz.current >= 5) {
+    clearInterval(quiz.timerInterval);
+    showScreen('paywall-screen');
+    return;
+  }
+ 
+  const total = quiz.questions.length;
+  const pct = Math.round((quiz.current/total)*100);
+  document.getElementById('prog-fill').style.width = pct + '%';
+  document.getElementById('prog-lbl').textContent = `${quiz.current+1}/${total}`;
+  document.getElementById('sc-correct').textContent = quiz.correct;
+  document.getElementById('sc-wrong').textContent = quiz.wrong;
+  document.getElementById('sc-skip').textContent = quiz.skipped;
+  document.getElementById('sc-score').textContent = quiz.score;
+ 
+  const isBm = state.bookmarks.some(b=>b.q===q.q);
+  document.getElementById('btn-bookmark').textContent = isBm ? '⭐' : '🔖';
+  document.getElementById('btn-bookmark').classList.toggle('saved', isBm);
+ 
+  const letters = ['A','B','C','D'];
+  const html = `
+    <div class="q-card">
+      <div class="q-meta">
+        <span class="q-tag qt-${q.subject}">${q.subject}</span>
+        <span class="q-num">Q${quiz.current+1} of ${total}</span>
+      </div>
+      <div class="q-text${q.subject==='Urdu'?' urdu-q':''}">${q.q}</div>
+      <div class="options" id="options">
+        ${q.opts.map((opt,i)=>`
+          <div class="opt" id="opt-${i}" onclick="selectOpt(${i})">
+            <div class="opt-ltr">${letters[i]}</div>
+            <div>${opt}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="expl-box" id="expl-box">
+        <span class="expl-label" style="color:var(--green)">✅ Correct Answer</span>
+        <div class="expl-correct">${q.exp}</div>
+        ${q.wrng?`<div class="expl-wrong"><span class="expl-label" style="color:var(--red)">❌ Why Others Wrong</span>${q.wrng}</div>`:''}
+      </div>
+    </div>
+  `;
+  document.getElementById('quiz-body').innerHTML = html;
+  document.getElementById('quiz-controls').style.display = 'flex';
+  document.getElementById('btn-skip').style.display = 'flex';
+  document.getElementById('btn-next').style.display = 'none';
+  document.getElementById('ai-tutor-btn').style.display = 'none';
+  document.getElementById('ai-tutor-box').classList.remove('show');
+}
+ 
+function selectOpt(idx) {
+  if (quiz.answered) return;
+  quiz.answered = true;
+  const q = quiz.questions[quiz.current];
+  const isCorrect = idx === q.ans;
+  const subj = q.subject;
+  if (!quiz.subjectStats[subj]) quiz.subjectStats[subj] = {c:0,t:0};
+  quiz.subjectStats[subj].t++;
+ 
+  document.querySelectorAll('.opt').forEach(o=>o.classList.add('locked'));
+  if (isCorrect) {
+    document.getElementById('opt-'+idx).classList.add('correct');
+    quiz.correct++;
+    quiz.score++;
+    quiz.subjectStats[subj].c++;
+  } else {
+    document.getElementById('opt-'+idx).classList.add('wrong');
+    document.getElementById('opt-'+q.ans).classList.add('correct');
+    quiz.wrong++;
+    if (quiz.negMarking) quiz.score = Math.max(0, quiz.score - 0.25);
+    quiz.subjectStats[subj].t++;
+  }
+  document.getElementById('expl-box').classList.add('show');
+  document.getElementById('btn-skip').style.display = 'none';
+  document.getElementById('btn-next').style.display = 'flex';
+  document.getElementById('ai-tutor-btn').style.display = 'flex';
+}
+ 
+function skipQuestion() {
+  if (quiz.answered) return;
+  quiz.skipped++;
+  quiz.answered = true;
+  const q = quiz.questions[quiz.current];
+  document.querySelectorAll('.opt').forEach(o=>o.classList.add('locked'));
+  document.getElementById('opt-'+q.ans).classList.add('correct');
+  document.getElementById('expl-box').classList.add('show');
+  document.getElementById('btn-skip').style.display = 'none';
+  document.getElementById('btn-next').style.display = 'flex';
+}
+ 
+function nextQuestion() {
+  quiz.current++;
+  document.getElementById('ai-tutor-box').classList.remove('show');
+  renderQuestion();
+}
+ 
+function finishQuiz() {
+  clearInterval(quiz.timerInterval);
+  state.totalDone += quiz.questions.length;
+  state.totalCorrect += quiz.correct;
+  state.sessionsDone++;
+  updateStreak();
+  saveState();
+ 
+  if (quiz.isReadiness) {
+    showReadinessResult();
+  } else {
+    showResult();
+    // End of test popup for premium
+    if (state.isPremium && state.sessionsDone > 0 && state.sessionsDone % 3 === 0) {
+      setTimeout(()=>showModal('🏆 Ready for the Real Test?',
+        `You've completed ${state.sessionsDone} sessions! Take your Final Readiness Exam to see how prepared you really are.`,
+        'Take Readiness Exam', goToReadiness), 1500);
+    }
+  }
+}
+ 
+// ============================================================
+// AI TUTOR
+// ============================================================
+async function toggleAiTutor() {
+  const box = document.getElementById('ai-tutor-box');
+  if (box.classList.contains('show')) { box.classList.remove('show'); return; }
+  const q = quiz.questions[quiz.current];
+  box.innerHTML = '<p style="color:var(--ink3);font-family:var(--mono);font-size:11px;">🤖 AI is thinking...</p>';
+  box.classList.add('show');
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        model:'claude-sonnet-4-6',
+        max_tokens:300,
+        messages:[{role:'user',content:`You are a KPPSC exam tutor. Explain this MCQ in simple Urdu/English mix (as Pakistani students prefer). Question: "${q.q}". Correct answer: "${q.opts[q.ans]}". Explanation: ${q.exp}. Give a 2-3 line simple explanation a student can understand quickly.`}]
+      })
+    });
+    const data = await response.json();
+    const txt = data.content?.[0]?.text || q.exp;
+    box.innerHTML = `<p style="font-size:12px;color:var(--ink2);line-height:1.7;">🤖 ${txt}</p>`;
+  } catch(e) {
+    box.innerHTML = `<p style="font-size:12px;color:var(--ink2);line-height:1.7;">💡 ${q.exp}</p>`;
+  }
+}
+ 
+// ============================================================
+// RESULT
+// ============================================================
+function showResult() {
+  showScreen('result-screen');
+  const total = quiz.questions.length;
+  const pct = total > 0 ? Math.round((quiz.correct/total)*100) : 0;
+  document.getElementById('res-pct').textContent = pct + '%';
+  const circumference = 345.4;
+  const offset = circumference - (circumference * pct / 100);
+  setTimeout(()=>{ document.getElementById('score-ring-fill').style.strokeDashoffset = offset; }, 100);
+ 
+  let grade, msg, color;
+  if (pct>=80){grade='Excellent 🏆';msg='Outstanding! You are exam ready.';color='var(--green)';}
+  else if (pct>=60){grade='Good 👍';msg='Good progress! Focus on weak subjects.';color='var(--gold)';}
+  else if (pct>=40){grade='Average 📚';msg='Keep practicing. Review the weak areas.';color='var(--amber)';}
+  else{grade='Needs Work 💪';msg="Don't give up. Consistent practice wins.";color='var(--red)';}
+  document.getElementById('res-grade').textContent = grade;
+  document.getElementById('res-grade').style.color = color;
+  document.getElementById('res-msg').textContent = msg;
+  document.getElementById('result-badge').textContent = pct + '%';
+ 
+  // Subject breakdown
+  const rows = Object.entries(quiz.subjectStats).map(([subj,stat])=>{
+    const p = stat.t > 0 ? Math.round((stat.c/stat.t)*100) : 0;
+    return `<div class="bd-row">
+      <span class="bd-tag qt-${subj}">${subj}</span>
+      <div class="bd-bar-wrap"><div class="bd-bar" style="width:${p}%"></div></div>
+      <span class="bd-pct">${p}%</span>
+    </div>`;
+  }).join('');
+  document.getElementById('bd-rows').innerHTML = rows || '<div style="color:var(--ink3);font-size:12px;">No subject data</div>';
+ 
+  // Weak subjects
+  const weak = Object.entries(quiz.subjectStats)
+    .filter(([,s])=>s.t>0 && s.c/s.t < 0.5).map(([subj])=>subj);
+  if (weak.length) {
+    document.getElementById('weak-box').style.display = 'block';
+    document.getElementById('weak-tags').innerHTML = weak.map(w=>`<span class="weak-tag">${w}</span>`).join('');
+  } else {
+    document.getElementById('weak-box').style.display = 'none';
+  }
+  updateStreakDisplay();
+}
+ 
+function showReadinessResult() {
+  showScreen('readiness-result-screen');
+  const total = quiz.questions.length;
+  const pct = total > 0 ? Math.round((quiz.correct/total)*100) : 0;
+  document.getElementById('readiness-pct').textContent = pct + '%';
+  let msg = pct >= 70 ? '🏆 You are READY for the real exam!' : pct >= 50 ? '📚 Almost there — keep grinding!' : '💪 More practice needed. You can do it!';
+  document.getElementById('readiness-msg').textContent = msg;
+ 
+  const grid = document.getElementById('readiness-breakdown');
+  grid.innerHTML = Object.entries(quiz.subjectStats).map(([subj,stat])=>{
+    const p = stat.t>0?Math.round((stat.c/stat.t)*100):0;
+    const cls = p>=70?'good':p>=50?'mid':'bad';
+    return `<div class="sbd-card"><div class="sbd-subj">${subj}</div><div class="sbd-pct ${cls}">${p}%</div></div>`;
+  }).join('');
+}
+ 
+function retryQuiz() {
+  if (state.currentJob) openJob(state.currentJob.id);
+  else if (state.currentSubject) openSubjectMode(state.currentSubject);
+  else showScreen('landing');
+}
+ 
+function shareResult() {
+  const pct = document.getElementById('res-pct').textContent;
+  const text = `I scored ${pct} on PakPrep Pro KPPSC 2026 practice! 🎯 Prepare for any Pakistan exam at pakprep.pro`;
+  if (navigator.share) navigator.share({title:'PakPrep Pro Result',text});
+  else { navigator.clipboard.writeText(text); showToast('Result copied!'); }
+}
+ 
+// ============================================================
+// PAYWALL & UNLOCK
+// ============================================================
+function selectPlan(el, plan) {
+  state.selectedPlan = plan;
+  document.querySelectorAll('.plan-card').forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+}
+ 
+function openWhatsApp() {
+  const plans = {weekly:'Weekly Rs199',monthly:'Monthly Rs499',full:'Full Prep Rs999'};
+  const msg = encodeURIComponent(`Hi! I want to unlock PakPrep Pro — ${plans[state.selectedPlan]||'Monthly Rs499'} plan for KPPSC 2026 preparation.`);
+  window.open(`https://wa.me/923001234567?text=${msg}`, '_blank');
+}
+ 
+function tryUnlockCode() {
+  const code = document.getElementById('code-input').value.trim().toUpperCase();
+  const errEl = document.getElementById('code-err');
+  const okEl = document.getElementById('code-ok');
+  if (VALID_CODES.includes(code)) {
+    state.isPremium = true;
+    saveState();
+    errEl.style.display = 'none';
+    okEl.style.display = 'block';
+    okEl.textContent = '✅ Unlocked! Enjoy full access.';
+    setTimeout(()=>showScreen('landing'), 1500);
+  } else {
+    errEl.style.display = 'block';
+    okEl.style.display = 'none';
+  }
+}
+ 
+// ============================================================
+// BOOKMARKS
+// ============================================================
+function toggleBookmark() {
+  const q = quiz.questions[quiz.current];
+  if (!q) return;
+  const idx = state.bookmarks.findIndex(b=>b.q===q.q);
+  if (idx >= 0) {
+    state.bookmarks.splice(idx,1);
+    showToast('Bookmark removed');
+    document.getElementById('btn-bookmark').textContent = '🔖';
+    document.getElementById('btn-bookmark').classList.remove('saved');
+  } else {
+    state.bookmarks.push({q:q.q,ans:q.opts[q.ans],subject:q.subject,exp:q.exp});
+    showToast('⭐ Bookmarked!');
+    document.getElementById('btn-bookmark').textContent = '⭐';
+    document.getElementById('btn-bookmark').classList.add('saved');
+  }
+  saveState();
+  renderBookmarks();
+}
+ 
+function renderBookmarks() {
+  const list = document.getElementById('bm-list');
+  const count = document.getElementById('bm-count');
+  count.textContent = state.bookmarks.length;
+  if (!state.bookmarks.length) {
+    list.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--ink3);font-size:13px;">No bookmarks yet.<br>Tap 🔖 during practice to save questions.</div>';
+    return;
+  }
+  list.innerHTML = state.bookmarks.map((b,i)=>`
+    <div class="bm-item">
+      <div class="bm-q">${b.q}</div>
+      <div class="bm-ans">✅ ${b.ans}</div>
+      <div class="bm-subj">${b.subject}</div>
+    </div>
+  `).join('');
+}
+ 
+// ============================================================
+// LEADERBOARD
+// ============================================================
+function renderLeaderboard() {
+  const lb = document.getElementById('lb-list');
+  const mockData = [
+    {name:'Ahmad Khan',score:2450,streak:14},
+    {name:'Fatima Bibi',score:2310,streak:11},
+    {name:'Usman Ali',score:2190,streak:9},
+    {name:'Sara Gul',score:2050,streak:8},
+    {name:'Imran Baig',score:1980,streak:7},
+    {name:'Nadia Qureshi',score:1870,streak:6},
+    {name:'Tariq Shah',score:1750,streak:5},
+    {name:'Hina Malik',score:1620,streak:4},
+    {name:'Bilal Ahmed',score:1540,streak:3},
+    {name:'You 🔥',score:state.totalCorrect*10,streak:state.streak,isMe:true},
+  ].sort((a,b)=>b.score-a.score);
+  lb.innerHTML = mockData.map((p,i)=>`
+    <div class="lb-item${p.isMe?' me':''}">
+      <div class="lb-rank">${i<3?['🥇','🥈','🥉'][i]:i+1}</div>
+      <div class="lb-name">${p.name}<br><span style="font-size:9px;color:var(--ink3);font-family:var(--mono);">🔥 ${p.streak} day streak</span></div>
+      <div class="lb-score">${p.score} pts</div>
+    </div>
+  `).join('');
+}
+ 
+// ============================================================
+// PLANNER
+// ============================================================
+function renderPlanner() {
+  const container = document.getElementById('plan-week');
+  const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const subjects = state.currentJob ? state.currentJob.subjects : ['English','GK','Maths','Science','Urdu','Pedagogy','IT'];
+  const plans = days.map((day,i)=>{
+    const subj = subjects[i % subjects.length];
+    const nextSubj = subjects[(i+1) % subjects.length];
+    return {day, hours:2, tasks:`${subj} — 10 MCQs practice<br>${nextSubj} — Review notes & past papers`};
+  });
+  container.innerHTML = plans.map(p=>`
+    <div class="plan-day">
+      <div class="plan-day-head">
+        <span class="plan-day-name">${p.day}</span>
+        <span class="plan-day-hrs">${p.hours} hrs</span>
+      </div>
+      <div class="plan-day-tasks">${p.tasks}</div>
+    </div>
+  `).join('');
+  const plannerDateEl = document.getElementById('planner-exam-date');
+  if (plannerDateEl && state.examDate) {
+    plannerDateEl.textContent = new Date(state.examDate).toLocaleDateString('en-PK',{day:'numeric',month:'long',year:'numeric'});
+  }
+}
+ 
+// ============================================================
+// READINESS CARD
+// ============================================================
+function goToReadiness() {
+  closeModal();
+  if (state.currentJob) startReadiness();
+  else showScreen('mode-screen');
+}
+ 
+// ============================================================
+// MODAL
+// ============================================================
+function showModal(title, body, btnText, onConfirm) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-body').textContent = body;
+  document.getElementById('modal-primary-btn').textContent = btnText;
+  document.getElementById('modal-primary-btn').onclick = onConfirm || closeModal;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
+ 
+// ============================================================
+// TOAST
+// ============================================================
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 2500);
+}
+ 
+// ============================================================
+// SCREEN NAVIGATION
+// ============================================================
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+  if (id==='leaderboard-screen') renderLeaderboard();
+  if (id==='bookmarks-screen') renderBookmarks();
+  if (id==='planner-screen') renderPlanner();
+}
+ 
+// ============================================================
+// START
+// ============================================================
+init();
+</script>
+</body>
+</html>
+ 
