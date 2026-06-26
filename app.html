@@ -82,12 +82,6 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:10
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='rgba(0,166,81,0.04)' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='12' fill='none' stroke='rgba(0,166,81,0.03)' stroke-width='1'/%3E%3C/svg%3E");
-  background-size:60px 60px;}
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse 70% 50% at 20% 20%,rgba(0,166,81,0.07) 0%,transparent 70%),
-    radial-gradient(ellipse 60% 40% at 80% 80%,rgba(212,168,67,0.05) 0%,transparent 60%);}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
