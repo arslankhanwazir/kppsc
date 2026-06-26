@@ -354,8 +354,9 @@ document.getElementById('gen-btn').addEventListener('click', function() {
   }
 
   saveState(allKeys);
-  renderStats();
-  renderTable(curSearch);
+renderStats();
+    renderTable('');
+    pullFromFirebase();
 
   document.getElementById('gen-codes-list').innerHTML = generated.map(function(c){
     return '<div class="gen-code" onclick="copyCode(\''+c+'\')" title="Click to copy">'+c+'</div>';
@@ -363,6 +364,7 @@ document.getElementById('gen-btn').addEventListener('click', function() {
   document.getElementById('gen-result').style.display = 'block';
   setSyncPending();
   showToast('✅ Generated ' + count + ' ' + type + ' keys');
+  document.getElementById('sync-btn').click();
 });
 
 // ════════════════════════════════════════════
@@ -377,6 +379,23 @@ document.getElementById('tabs-row').addEventListener('click', function(e){
   var titles = {all:'All Keys',SP:'Single Post Keys',LT:'Lifetime Keys',available:'Available Keys',sent:'Sent Keys',used:'Used Keys'};
   document.getElementById('table-title').textContent = titles[curTab] || curTab;
   renderTable(curSearch);
+  async function pullFromFirebase() {
+  try {
+    var res = await fetch('https://kppsc-prep-default-rtdb.firebaseio.com/keys.json');
+    var fbData = await res.json();
+    if (!fbData) return;
+    Object.values(allKeys).forEach(function(k){
+      if (fbData[k.code] && fbData[k.code].status === 'used') {
+        k.status = 'used';
+        k.usedAt = fbData[k.code].usedAt || '';
+      }
+    });
+    saveState(allKeys);
+    renderStats();
+    renderTable(curSearch);
+    showToast('🔄 Synced status from Firebase');
+  } catch(e) {}
+}
 });
 
 // ════════════════════════════════════════════
@@ -475,6 +494,7 @@ document.getElementById('confirm-btn').addEventListener('click', function(){
   renderTable(curSearch);
   setSyncPending();
   showToast('📤 Marked as Sent — sync to Firebase so student can use it');
+  document.getElementById('sync-btn').click();
 });
 
 // ════════════════════════════════════════════
