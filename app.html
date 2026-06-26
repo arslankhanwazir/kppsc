@@ -521,7 +521,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
 </style>
 </head>
 <body>
-
+<canvas id="animated-bg"></canvas>
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
@@ -1748,6 +1748,36 @@ function showScreen(id){
   if(id==='bookmarks-screen') renderBookmarks();
   if(id==='planner-screen') renderPlanner();
 }
+
+// ===== ANIMATED BACKGROUND =====
+(function(){
+  const canvas=document.getElementById('animated-bg');
+  const ctx=canvas.getContext('2d');
+  let W,H,particles=[],nodes=[],t=0;
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  resize();window.addEventListener('resize',()=>{resize();initBg();});
+  const COLORS=['#00ff8c','#00c4ff','#d4a843','#7c5cfc','#ff4b6e'];
+  class Particle{constructor(){this.reset()}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.z=Math.random()*2+0.2;this.vx=(Math.random()-.5)*0.4*this.z;this.vy=(Math.random()-.5)*0.4*this.z;this.r=Math.random()*1.5+0.3;this.color=COLORS[Math.floor(Math.random()*COLORS.length)];this.opacity=Math.random()*0.6+0.2;this.life=0;this.maxLife=Math.random()*400+200;}update(){this.x+=this.vx;this.y+=this.vy;this.life++;if(this.life>this.maxLife||this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){const alpha=Math.min(this.life/40,1)*Math.min((this.maxLife-this.life)/40,1)*this.opacity;ctx.save();ctx.globalAlpha=alpha;ctx.shadowBlur=6*this.z;ctx.shadowColor=this.color;ctx.fillStyle=this.color;ctx.beginPath();ctx.arc(this.x,this.y,this.r*this.z,0,Math.PI*2);ctx.fill();ctx.restore();}}
+  class Node{constructor(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*0.3;this.vy=(Math.random()-.5)*0.3;this.r=Math.random()*2+1;this.color=COLORS[Math.floor(Math.random()*COLORS.length)];this.pulse=Math.random()*Math.PI*2;}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W)this.vx*=-1;if(this.y<0||this.y>H)this.vy*=-1;this.pulse+=0.04;}draw(){const glow=1+Math.sin(this.pulse)*0.5;ctx.save();ctx.shadowBlur=10*glow;ctx.shadowColor=this.color;ctx.fillStyle=this.color;ctx.globalAlpha=0.8;ctx.beginPath();ctx.arc(this.x,this.y,this.r*glow,0,Math.PI*2);ctx.fill();ctx.restore();}}
+  function drawEdges(){for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<160){ctx.save();ctx.globalAlpha=(1-d/160)*0.15;ctx.strokeStyle='#00a651';ctx.lineWidth=0.5;ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();ctx.restore();}}}
+  function drawGrid(){const gridSize=60,offX=(t*8)%gridSize;ctx.save();ctx.globalAlpha=0.06;ctx.strokeStyle='#00a651';ctx.lineWidth=0.5;const cols=Math.ceil(W/gridSize)+4;for(let i=-2;i<cols;i++){const x=i*gridSize-offX;ctx.beginPath();ctx.moveTo(x,H*0.4);ctx.lineTo(W/2+(x-W/2)*0.3,H*0.6);ctx.stroke();}for(let j=0;j<20;j++){const fy=j/20,y=H*0.4+fy*(H*0.2);ctx.globalAlpha=fy*0.1;ctx.beginPath();ctx.moveTo(W/2-fy*(W*0.6),y);ctx.lineTo(W/2+fy*(W*0.6),y);ctx.stroke();}ctx.restore();}
+  function drawHex(){[{cx:W*0.08,cy:H*0.2,r:40,s:0.008},{cx:W*0.92,cy:H*0.25,r:30,s:0.012},{cx:W*0.06,cy:H*0.75,r:25,s:0.01},{cx:W*0.94,cy:H*0.75,r:35,s:0.009}].forEach(h=>{ctx.save();ctx.globalAlpha=0.07;ctx.strokeStyle='#7c5cfc';ctx.lineWidth=1;ctx.translate(h.cx+Math.sin(t*0.7+h.s*100)*12,h.cy+Math.cos(t*0.5+h.s*100)*8);ctx.rotate(t*h.s);ctx.beginPath();for(let i=0;i<6;i++){const a=i*Math.PI/3;i===0?ctx.moveTo(Math.cos(a)*h.r,Math.sin(a)*h.r):ctx.lineTo(Math.cos(a)*h.r,Math.sin(a)*h.r);}ctx.closePath();ctx.stroke();ctx.restore();});}
+  function drawPulse(){nodes.forEach(n=>{const c=nodes.filter(o=>o!==n).sort((a,b)=>Math.hypot(a.x-n.x,a.y-n.y)-Math.hypot(b.x-n.x,b.y-n.y))[0];if(!c)return;const ph=((t*0.8+n.pulse*3)%1);if(ph<0.5){ctx.save();ctx.globalAlpha=0.5*(1-ph*2);ctx.fillStyle='#d4a843';ctx.shadowBlur=8;ctx.shadowColor='#d4a843';ctx.beginPath();ctx.arc(n.x+(c.x-n.x)*ph*2,n.y+(c.y-n.y)*ph*2,2,0,Math.PI*2);ctx.fill();ctx.restore();}});}
+  function initBg(){particles=Array.from({length:160},()=>new Particle());nodes=Array.from({length:50},()=>new Node());}
+  initBg();
+  (function loop(){
+    t+=0.01;ctx.clearRect(0,0,W,H);
+    const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*0.8);
+    g.addColorStop(0,'#071a0e');g.addColorStop(0.5,'#040d07');g.addColorStop(1,'#020604');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    drawGrid();drawHex();
+    for(let i=0;i<4;i++){const r=80+i*70+Math.sin(t+i*1.2)*10;ctx.save();ctx.globalAlpha=0.035-i*0.007;ctx.strokeStyle='#00c4ff';ctx.lineWidth=1;ctx.beginPath();ctx.arc(W/2,H/2,r,0,Math.PI*2);ctx.stroke();ctx.restore();}
+    drawEdges();nodes.forEach(n=>{n.update();n.draw();});drawPulse();
+    particles.forEach(p=>{p.update();p.draw();});
+    requestAnimationFrame(loop);
+  })();
+})();
+// ===== END ANIMATED BACKGROUND =====
 
 init();
 </script>
