@@ -496,7 +496,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
       <div class="logo-main">Pak<span>Prep</span> Pro</div>
       <div class="logo-sub">AI-Powered Exam Prep</div>
     </div>
-    <div class="nav-badge">KPPSC 2026</div>
+    <div class="nav-badge">Pakpre Pro</div>
   </nav>
 
   <div class="land-hero">
@@ -504,7 +504,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
     <div class="hero-urdu">پاکستانی امتحانات کی تیاری</div>
     <h1 class="hero-h1">Crack <span class="green">Any</span> Pakistan<br><span class="gold">Exam</span></h1>
     <p class="hero-sub">Real MCQs • AI Tutor • Smart Practice • Subject Drill</p>
-    <div class="adv-badge"><span class="flag">🇵🇰</span> KPPSC 2026 — All Posts Covered</div>
+    <div class="adv-badge"><span class="flag">🇵🇰</span> Pakistan All tests — All Posts Covered</div>
   </div>
 
   <!-- COUNTDOWN -->
@@ -586,7 +586,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
     </div>
   </div>
 
-  <div class="land-footer"><span>PakPrep Pro</span> · KPPSC 2026 · All rights reserved</div>
+  <div class="land-footer"><span>PakPrep Pro</span> ·Pakpre pro · All rights reserved</div>
 </div>
 
 <!-- ==================== MODE SCREEN (Job) ==================== -->
@@ -911,7 +911,7 @@ input:checked+.slider:before{transform:translateX(14px);background-color:#fff;}
 // ============================================================
 // VALID CODES
 // ============================================================
-const VALID_CODES = ['STITCHAI2025','KPPSC2026'];
+const VALID_CODES = ['STITCHAI2025','Pakpre pro'];
 
 // ============================================================
 // STATE
@@ -1561,7 +1561,7 @@ function retryQuiz() {
 
 function shareResult() {
   const pct=document.getElementById('res-pct').textContent;
-  const text=`I scored ${pct} on PakPrep Pro KPPSC 2026! 🎯 Try it yourself.`;
+  const text=`I scored ${pct} on PakPrep Pro ! 🎯 Try it yourself.`;
   if(navigator.share) navigator.share({title:'PakPrep Pro',text});
   else{navigator.clipboard.writeText(text);showToast('Result copied!');}
 }
